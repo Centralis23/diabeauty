@@ -183,8 +183,8 @@ img, video { max-width: 100%; display: block; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(120% 90% at 50% 45%, rgba(20, 14, 13, 0) 40%, rgba(20, 14, 13, 0.5) 78%, rgba(20, 14, 13, 0.88) 100%),
-    linear-gradient(180deg, rgba(20, 14, 13, 0.62) 0%, rgba(20, 14, 13, 0.4) 45%, rgba(20, 14, 13, 0.82) 100%);
+    radial-gradient(120% 90% at 50% 45%, rgba(20, 14, 13, 0) 55%, rgba(20, 14, 13, 0.18) 85%, rgba(20, 14, 13, 0.4) 100%),
+    linear-gradient(180deg, rgba(20, 14, 13, 0.28) 0%, rgba(20, 14, 13, 0.08) 40%, rgba(20, 14, 13, 0.55) 100%);
   z-index: 1;
 }
 
