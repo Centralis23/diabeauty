@@ -1,4 +1,4 @@
-# Éclat Beauté — Site vitrine
+# Diabeauty — Site vitrine
 
 Site vitrine statique (HTML/CSS/JS, sans dépendances) pour un salon de beauté, avec une vidéo en fond de bannière d'accueil.
 
