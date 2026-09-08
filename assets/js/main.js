@@ -8,6 +8,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  const heroTitle = document.getElementById('hero-title');
+  if (heroTitle && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const fullText = heroTitle.textContent;
+    heroTitle.textContent = '';
+    heroTitle.classList.add('typing');
+    let i = 0;
+    const typeNext = () => {
+      i += 1;
+      heroTitle.textContent = fullText.slice(0, i);
+      if (i < fullText.length) {
+        setTimeout(typeNext, 110);
+      } else {
+        heroTitle.classList.remove('typing');
+      }
+    };
+    setTimeout(typeNext, 300);
+  }
+
   const onScroll = () => {
     if (window.scrollY > 40) {
       header.classList.add('scrolled');
