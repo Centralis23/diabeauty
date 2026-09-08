@@ -166,26 +166,10 @@ img, video { max-width: 100%; display: block; }
   align-items: center;
   overflow: hidden;
   color: var(--color-white);
-}
-
-.hero-video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1.16);
-  transform-origin: center;
-  z-index: 0;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
   background:
-    radial-gradient(120% 90% at 50% 45%, rgba(20, 14, 13, 0) 55%, rgba(20, 14, 13, 0.18) 85%, rgba(20, 14, 13, 0.4) 100%),
-    linear-gradient(180deg, rgba(20, 14, 13, 0.28) 0%, rgba(20, 14, 13, 0.08) 40%, rgba(20, 14, 13, 0.55) 100%);
-  z-index: 1;
+    radial-gradient(90% 70% at 12% 15%, rgba(185, 141, 79, 0.32) 0%, rgba(185, 141, 79, 0) 48%),
+    radial-gradient(90% 75% at 88% 105%, rgba(169, 103, 113, 0.6) 0%, rgba(169, 103, 113, 0) 55%),
+    linear-gradient(160deg, #241b19 0%, #3a2620 45%, #5c3138 100%);
 }
 
 .hero-grain {
