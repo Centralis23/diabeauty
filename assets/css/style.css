@@ -160,74 +160,67 @@ img, video { max-width: 100%; display: block; }
   position: relative;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 36px;
   overflow: hidden;
   color: var(--color-ink);
-  background: linear-gradient(160deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
-  padding: 96px 24px 80px;
+  background: var(--color-bg-alt);
+  padding: 120px 24px 80px;
 }
 
-.hero-marquee-wrap {
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  width: 100vw;
-  overflow: hidden;
-  background: var(--color-ink);
-  padding: 12px 0;
-}
-
-.hero-marquee-track {
+.hero-photowall {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  transform: rotate(-4deg) scale(1.08);
+}
+
+.pw-row {
+  display: flex;
+  gap: 20px;
   width: max-content;
-  gap: 48px;
-  padding: 0 24px;
-  white-space: nowrap;
-  animation: hero-marquee-scroll 26s linear infinite;
 }
 
-.hero-marquee-track span {
-  color: var(--color-white);
-  font-size: 0.85rem;
-  letter-spacing: 0.02em;
-}
+.pw-row-1 { animation: pw-scroll-left 52s linear infinite; }
+.pw-row-2 { animation: pw-scroll-right 60s linear infinite; }
+.pw-row-3 { animation: pw-scroll-left 68s linear infinite; }
 
-@keyframes hero-marquee-scroll {
+@keyframes pw-scroll-left {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
-
+@keyframes pw-scroll-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
 @media (prefers-reduced-motion: reduce) {
-  .hero-marquee-track { animation: none; }
+  .pw-row-1, .pw-row-2, .pw-row-3 { animation: none; }
 }
 
-.hero-blob {
+.pw-card {
+  display: block;
+  width: 170px;
+  height: 210px;
+  border-radius: 18px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 12px 28px rgba(43, 36, 34, 0.16);
+}
+.pw-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-scrim {
   position: absolute;
-  border-radius: 50%;
-  filter: blur(70px);
+  inset: 0;
   z-index: 0;
-  pointer-events: none;
-}
-.hero-blob-1 {
-  width: 560px;
-  height: 560px;
-  top: -180px;
-  left: -160px;
-  background: var(--color-rose);
-  opacity: 0.5;
-}
-.hero-blob-2 {
-  width: 480px;
-  height: 480px;
-  bottom: -200px;
-  right: -140px;
-  background: var(--color-gold);
-  opacity: 0.32;
+  background: radial-gradient(60% 55% at 50% 50%, rgba(253, 250, 247, 0.75) 0%, rgba(253, 250, 247, 0.25) 62%, rgba(253, 250, 247, 0) 78%);
 }
 
 .hero-card {
