@@ -160,12 +160,50 @@ img, video { max-width: 100%; display: block; }
   position: relative;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 36px;
   overflow: hidden;
   color: var(--color-ink);
   background: linear-gradient(160deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
-  padding: 120px 24px 80px;
+  padding: 96px 24px 80px;
+}
+
+.hero-marquee-wrap {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  overflow: hidden;
+  background: var(--color-ink);
+  padding: 12px 0;
+}
+
+.hero-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 48px;
+  padding: 0 24px;
+  white-space: nowrap;
+  animation: hero-marquee-scroll 26s linear infinite;
+}
+
+.hero-marquee-track span {
+  color: var(--color-white);
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+}
+
+@keyframes hero-marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-marquee-track { animation: none; }
 }
 
 .hero-blob {
@@ -243,6 +281,58 @@ img, video { max-width: 100%; display: block; }
   gap: 16px;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.hero-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 36px;
+}
+
+.avatar-stack {
+  display: flex;
+}
+
+.avatar-stack span {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+  margin-left: -10px;
+}
+.avatar-stack span:first-child { margin-left: 0; }
+.avatar-a { background: var(--color-rose-dark); }
+.avatar-s { background: var(--color-gold); }
+.avatar-c { background: var(--color-ink-soft); }
+.avatar-m { background: var(--color-rose); }
+
+.hero-social p {
+  font-size: 0.88rem;
+  color: var(--color-ink-soft);
+}
+
+.hero-trust {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.hero-trust .stars {
+  color: var(--color-gold);
+  letter-spacing: 2px;
 }
 
 /* ===== Section headings ===== */
