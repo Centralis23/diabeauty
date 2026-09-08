@@ -313,21 +313,6 @@ img, video { max-width: 100%; display: block; }
   color: var(--color-ink-soft);
 }
 
-.hero-trust {
-  margin-top: 10px;
-  font-size: 0.85rem;
-  color: var(--color-ink-soft);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  flex-wrap: wrap;
-}
-.hero-trust .stars {
-  color: var(--color-gold);
-  letter-spacing: 2px;
-}
-
 /* ===== Section headings ===== */
 .section-eyebrow {
   text-transform: uppercase;
