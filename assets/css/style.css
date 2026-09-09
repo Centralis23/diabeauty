@@ -168,32 +168,65 @@ img, video { max-width: 100%; display: block; }
   color: var(--color-white);
 }
 
-.hero-split-media {
-  position: relative;
-  flex: 1 1 50%;
-  min-height: 100vh;
-  overflow: hidden;
-}
-.hero-split-media video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.hero-mirror {
+  align-items: center;
+  justify-content: center;
+  padding: 140px 32px 80px;
 }
 
-.hero-split-text {
+.hero-mirror-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(160deg, rgba(36, 27, 25, 0.62) 0%, rgba(58, 38, 32, 0.5) 45%, rgba(92, 49, 56, 0.62) 100%),
+    url('../img/salon-interieur.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-mirror-frame {
   position: relative;
-  flex: 1 1 50%;
-  min-height: 100vh;
+  z-index: 1;
+  width: min(560px, 88vw);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 120px 64px 80px;
-  background:
-    radial-gradient(90% 70% at 15% 15%, rgba(185, 141, 79, 0.28) 0%, rgba(185, 141, 79, 0) 50%),
-    linear-gradient(160deg, #241b19 0%, #3a2620 45%, #5c3138 100%);
+  align-items: center;
+  text-align: center;
+  padding: 76px 56px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: rgba(36, 27, 25, 0.22);
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(185, 141, 79, 0.55);
+  box-shadow:
+    0 0 0 10px rgba(185, 141, 79, 0.07),
+    inset 0 0 70px rgba(0, 0, 0, 0.3);
+}
+
+.hero-mirror-frame::before {
+  content: '';
+  position: absolute;
+  inset: 16px;
+  border: 1px solid rgba(185, 141, 79, 0.28);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-mirror-shine {
+  position: absolute;
+  top: -60%;
+  left: -60%;
+  width: 60%;
+  height: 220%;
+  background: linear-gradient(100deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.32) 50%, rgba(255, 255, 255, 0) 100%);
+  transform: rotate(20deg);
+  animation: hero-mirror-sweep 4.5s ease-in-out 1s infinite;
+  pointer-events: none;
+}
+
+@keyframes hero-mirror-sweep {
+  0% { left: -60%; }
+  22%, 100% { left: 140%; }
 }
 
 .hero-eyebrow {
@@ -204,7 +237,7 @@ img, video { max-width: 100%; display: block; }
 }
 
 .hero h1 {
-  font-size: clamp(2.8rem, 5.5vw, 4.6rem);
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
   line-height: 1.02;
   font-weight: 700;
   text-transform: uppercase;
@@ -214,17 +247,18 @@ img, video { max-width: 100%; display: block; }
 }
 
 .hero-subtitle {
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   font-weight: 300;
-  max-width: 420px;
+  max-width: 380px;
   margin: 0 0 32px;
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .hero-actions {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* ===== Section headings ===== */
@@ -484,9 +518,12 @@ section { padding: 110px 0; }
   }
   .main-nav.open a { color: var(--color-ink); }
 
-  .hero { flex-direction: column; }
-  .hero-split-media { min-height: 45vh; }
-  .hero-split-text { min-height: auto; padding: 64px 32px 64px; }
+  .hero-mirror-frame {
+    border-radius: 32px;
+    padding: 56px 32px;
+    width: min(440px, 92vw);
+  }
+  .hero-mirror-frame::before { border-radius: 24px; }
 
   .contact-inner { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
