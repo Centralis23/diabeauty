@@ -192,29 +192,31 @@ img, video { max-width: 100%; display: block; }
 }
 
 .emboss-text {
-  color: #f2e3d8;
+  color: #e7d5c4;
   text-shadow:
-    1px 1px 1px rgba(255, 255, 255, 0.95),
-    -1px -1px 1px rgba(139, 108, 73, 0.35),
-    0 6px 14px rgba(139, 108, 73, 0.18);
+    2px 2px 1px rgba(255, 255, 255, 0.95),
+    4px 5px 5px rgba(255, 255, 255, 0.55),
+    -2px -2px 1px rgba(120, 90, 58, 0.55),
+    -4px -5px 6px rgba(120, 90, 58, 0.3),
+    0 16px 30px rgba(120, 90, 58, 0.25);
 }
 
 .emboss-shimmer {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(100deg, transparent 35%, rgba(255, 255, 255, 0.95) 50%, transparent 65%);
-  background-size: 300% 100%;
-  background-position: -100% 0;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: emboss-shimmer 6s ease-in-out infinite;
+  top: -10%;
+  left: -22%;
+  width: 16%;
+  height: 120%;
+  background: linear-gradient(100deg, transparent 0%, rgba(255, 255, 255, 0.85) 50%, transparent 100%);
+  transform: rotate(10deg);
+  filter: blur(4px);
+  animation: emboss-shimmer 4s ease-in-out infinite;
   pointer-events: none;
 }
 
 @keyframes emboss-shimmer {
-  0%, 15% { background-position: -120% 0; }
-  55%, 100% { background-position: 120% 0; }
+  0% { left: -25%; }
+  45%, 100% { left: 115%; }
 }
 
 .hero-subtitle {
