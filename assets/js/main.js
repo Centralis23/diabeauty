@@ -40,4 +40,23 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => { formNote.hidden = true; }, 6000);
     });
   }
+
+  const heroMirror = document.querySelector('.hero-mirror');
+  const heroMirrorFrame = document.querySelector('.hero-mirror-frame');
+  const canTilt = heroMirror && heroMirrorFrame
+    && window.matchMedia('(pointer: fine)').matches
+    && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (canTilt) {
+    const maxTilt = 5;
+    heroMirror.addEventListener('mousemove', (e) => {
+      const rect = heroMirror.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      heroMirrorFrame.style.transform = `rotateY(${x * maxTilt * 2}deg) rotateX(${-y * maxTilt * 2}deg)`;
+    });
+    heroMirror.addEventListener('mouseleave', () => {
+      heroMirrorFrame.style.transform = 'rotateY(0deg) rotateX(0deg)';
+    });
+  }
 });
