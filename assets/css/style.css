@@ -546,26 +546,31 @@ section { padding: 110px 0; }
 
   .hero-subtitle { font-size: 0.92rem; max-width: 320px; }
 
-  .hero-resort-bar {
-    flex-wrap: wrap;
-    justify-content: center;
-    border-radius: 28px;
-    bottom: 24px;
-    padding: 14px;
-  }
-  .hero-bar-actions { flex-wrap: wrap; justify-content: center; }
-  .hero-bar-icon:last-child { order: 3; }
-
   .contact-inner { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .hero-resort-bar {
+    flex-direction: column;
+    align-items: stretch;
+    width: min(300px, calc(100vw - 48px));
+    border-radius: 26px;
+    bottom: 28px;
+    padding: 16px;
+    gap: 10px;
+  }
+  .hero-bar-icon { display: none; }
+  .hero-bar-actions { flex-direction: column; width: 100%; }
+  .btn-bar { width: 100%; text-align: center; }
 }
 
 @media (max-width: 520px) {
   section { padding: 80px 0; }
   .about-stats { gap: 32px; }
 
-  .hero-resort-content { margin-bottom: 150px; }
+  .hero-resort-content { margin-bottom: 170px; }
   .hero h1 { font-size: 3rem; margin-bottom: 10px; }
   .hero-resort-tagline { margin-bottom: 16px; }
-  .btn-bar { padding: 11px 18px; font-size: 0.82rem; }
+  .btn-bar { padding: 12px 18px; font-size: 0.85rem; }
 }
