@@ -105,32 +105,12 @@ img, video { max-width: 100%; display: block; }
 }
 
 .logo {
-  display: flex;
-  align-items: center;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-ink);
 }
-
-.logo-mark {
-  width: 52px;
-  height: 52px;
-}
-
-.logo-mark-dia,
-.logo-mark-beauty {
-  font-family: 'Fredoka', var(--font-body);
-  font-weight: 600;
-}
-
-.logo-mark-dia {
-  font-size: 68px;
-  fill: #c85c78;
-}
-
-.logo-mark-beauty {
-  font-size: 54px;
-  fill: #e8a4ad;
-}
-
-.site-footer .logo-mark { width: 44px; height: 44px; }
+.logo span { color: var(--color-gold); }
 
 .main-nav {
   display: flex;
