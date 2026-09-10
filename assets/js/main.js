@@ -40,4 +40,13 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => { formNote.hidden = true; }, 6000);
     });
   }
+
+  const accordionHeaders = document.querySelectorAll('.accordion-header');
+  accordionHeaders.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      accordionHeaders.forEach((other) => other.setAttribute('aria-expanded', 'false'));
+      btn.setAttribute('aria-expanded', String(!isOpen));
+    });
+  });
 });
