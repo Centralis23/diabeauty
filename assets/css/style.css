@@ -186,11 +186,7 @@ img, video { max-width: 100%; display: block; }
   font-weight: 400;
   letter-spacing: 0.03em;
   margin: 0 0 28px;
-}
-
-.emboss-text {
-  color: #d9c3a8;
-  filter: url(#emboss-filter);
+  color: var(--color-ink);
 }
 
 .hero-subtitle {
