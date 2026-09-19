@@ -705,9 +705,6 @@ section { padding: 110px 0; }
 
   .hero-subtitle { font-size: 0.92rem; max-width: 320px; }
 
-  .hero-emboss-title { margin-left: -24px; margin-right: -24px; }
-  .hero-emboss-title img { width: 100%; }
-
   .video-tour-inner { grid-template-columns: 1fr; gap: 40px; }
   .video-tour-media { width: 100%; max-width: 320px; margin: 0 auto; }
   .video-tour-text .section-eyebrow,
@@ -723,6 +720,7 @@ section { padding: 110px 0; }
 
   .hero-emboss { padding: 120px 20px 64px; }
   .hero-emboss-title { margin-left: -20px; margin-right: -20px; }
+  .hero-emboss-title img { width: 100%; }
   .hero-emboss-panel { flex-direction: column; width: 100%; max-width: 280px; border-radius: 28px; }
   .btn-emboss { width: 100%; text-align: center; }
 
