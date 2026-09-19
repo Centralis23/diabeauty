@@ -180,12 +180,12 @@ img, video { max-width: 100%; display: block; }
 }
 
 .hero-emboss-title {
-  margin: 0 0 20px;
+  margin: 0 -24px 20px;
   line-height: 0;
 }
 
 .hero-emboss-title img {
-  width: min(96%, 1100px);
+  width: calc(100% + 48px);
   height: auto;
   mask-image: url('../img/hero-title-mask.png');
   mask-size: 100% 100%;
@@ -721,6 +721,8 @@ section { padding: 110px 0; }
   .about-stats { gap: 32px; }
 
   .hero-emboss { padding: 120px 20px 64px; }
+  .hero-emboss-title { margin-left: -20px; margin-right: -20px; }
+  .hero-emboss-title img { width: calc(100% + 40px); }
   .hero-emboss-panel { flex-direction: column; width: 100%; max-width: 280px; border-radius: 28px; }
   .btn-emboss { width: 100%; text-align: center; }
 
