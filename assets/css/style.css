@@ -167,7 +167,7 @@ img, video { max-width: 100%; display: block; }
   text-align: center;
   padding: 140px 24px 80px;
   color: var(--color-ink);
-  background-color: #e6d6c7;
+  background: linear-gradient(to bottom, #e8d8c9, #e5d5c5);
 }
 
 .hero-emboss-eyebrow {
