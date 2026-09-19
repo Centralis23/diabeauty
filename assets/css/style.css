@@ -187,6 +187,12 @@ img, video { max-width: 100%; display: block; }
 .hero-emboss-title img {
   width: min(96%, 1100px);
   height: auto;
+  mask-image: url('../img/hero-title-mask.png');
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  -webkit-mask-image: url('../img/hero-title-mask.png');
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
 }
 
 .emboss-text {
