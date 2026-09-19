@@ -189,11 +189,11 @@ img, video { max-width: 100%; display: block; }
 }
 
 .emboss-text {
-  color: #e7d9c6;
+  color: #7c3f4f;
   text-shadow:
-    -0.01em -0.01em 0.015em rgba(255, 255, 255, 0.75),
-    0.03em 0.045em 0.07em rgba(120, 96, 68, 0.4),
-    0.02em 0.03em 0.16em rgba(120, 96, 68, 0.2);
+    -0.02em -0.025em 0.03em rgba(255, 255, 255, 0.55),
+    0.03em 0.05em 0.08em rgba(50, 18, 26, 0.4),
+    0 0.09em 0.18em rgba(50, 18, 26, 0.22);
 }
 
 .hero-subtitle {
