@@ -49,4 +49,19 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.setAttribute('aria-expanded', String(!isOpen));
     });
   });
+
+  const hotspots = document.querySelectorAll('.hotspot');
+  const hotspotItems = document.querySelectorAll('.hotspot-item');
+  const setActiveHotspot = (id) => {
+    hotspots.forEach((el) => el.classList.toggle('active', el.dataset.hotspot === id));
+    hotspotItems.forEach((el) => el.classList.toggle('active', el.dataset.hotspot === id));
+  };
+  hotspots.forEach((el) => {
+    el.addEventListener('mouseenter', () => setActiveHotspot(el.dataset.hotspot));
+    el.addEventListener('click', () => setActiveHotspot(el.dataset.hotspot));
+  });
+  hotspotItems.forEach((el) => {
+    el.addEventListener('mouseenter', () => setActiveHotspot(el.dataset.hotspot));
+    el.addEventListener('click', () => setActiveHotspot(el.dataset.hotspot));
+  });
 });
