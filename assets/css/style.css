@@ -167,7 +167,11 @@ img, video { max-width: 100%; display: block; }
   text-align: center;
   padding: 140px 24px 80px;
   color: var(--color-ink);
-  background: linear-gradient(180deg, #e9d7c9 0%, #e6d2c2 55%, #e3d0c2 100%);
+  background-color: #e6d2c2;
+  background-image: url('../img/diabeauty-texture.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-emboss-eyebrow {
@@ -187,8 +191,8 @@ img, video { max-width: 100%; display: block; }
 .hero-emboss-title img {
   width: min(94%, 1000px);
   height: auto;
-  mask-image: radial-gradient(ellipse 100% 80% at center, #000 40%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse 100% 80% at center, #000 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 100% 85% at center, #000 60%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 100% 85% at center, #000 60%, transparent 100%);
 }
 
 .emboss-text {
