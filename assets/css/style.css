@@ -189,11 +189,16 @@ img, video { max-width: 100%; display: block; }
 }
 
 .emboss-text {
-  color: #7c3f4f;
+  color: #6d3546;
   text-shadow:
-    -2px -2px 3px rgba(255, 255, 255, 0.55),
-    3px 4px 6px rgba(50, 18, 26, 0.45),
-    0 6px 14px rgba(50, 18, 26, 0.28);
+    -1px -1px 0 rgba(255, 255, 255, 0.85),
+    -2px -2px 1px rgba(255, 255, 255, 0.5),
+    -3px -3px 3px rgba(255, 255, 255, 0.25),
+    1px 1px 0 rgba(35, 8, 15, 0.55),
+    2px 2px 1px rgba(35, 8, 15, 0.5),
+    3px 3px 3px rgba(35, 8, 15, 0.4),
+    4px 5px 6px rgba(35, 8, 15, 0.3),
+    0 8px 16px rgba(35, 8, 15, 0.22);
 }
 
 .hero-subtitle {
