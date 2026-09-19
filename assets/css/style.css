@@ -191,9 +191,9 @@ img, video { max-width: 100%; display: block; }
 .emboss-text {
   color: #7c3f4f;
   text-shadow:
-    -0.02em -0.025em 0.03em rgba(255, 255, 255, 0.55),
-    0.03em 0.05em 0.08em rgba(50, 18, 26, 0.4),
-    0 0.09em 0.18em rgba(50, 18, 26, 0.22);
+    -2px -2px 3px rgba(255, 255, 255, 0.55),
+    3px 4px 6px rgba(50, 18, 26, 0.45),
+    0 6px 14px rgba(50, 18, 26, 0.28);
 }
 
 .hero-subtitle {
