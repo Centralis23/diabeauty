@@ -167,11 +167,7 @@ img, video { max-width: 100%; display: block; }
   text-align: center;
   padding: 140px 24px 80px;
   color: var(--color-ink);
-  background-color: #e6d2c2;
-  background-image: url('../img/diabeauty-texture.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: #e7d3c8;
 }
 
 .hero-emboss-eyebrow {
@@ -189,7 +185,7 @@ img, video { max-width: 100%; display: block; }
 }
 
 .hero-emboss-title img {
-  width: min(94%, 1000px);
+  width: min(96%, 1100px);
   height: auto;
 }
 
@@ -719,8 +715,6 @@ section { padding: 110px 0; }
   .about-stats { gap: 32px; }
 
   .hero-emboss { padding: 120px 20px 64px; }
-  .hero-emboss-title { margin-left: -20px; margin-right: -20px; }
-  .hero-emboss-title img { width: 100%; }
   .hero-emboss-panel { flex-direction: column; width: 100%; max-width: 280px; border-radius: 28px; }
   .btn-emboss { width: 100%; text-align: center; }
 
