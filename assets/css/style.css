@@ -384,13 +384,45 @@ section { padding: 110px 0; }
 }
 
 /* ===== About ===== */
-.about { background: var(--color-bg-alt); }
+.about { padding: 48px 24px; }
 
-.about-inner { max-width: 760px; text-align: center; margin: 0 auto; }
+.about-video-wrap {
+  position: relative;
+  max-width: 1240px;
+  margin: 0 auto;
+  border-radius: 18px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.about-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.about-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(30, 20, 18, 0.72) 0%, rgba(30, 20, 18, 0.6) 55%, rgba(30, 20, 18, 0.72) 100%);
+  z-index: -1;
+}
+
+.about-inner {
+  max-width: 760px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 110px 24px;
+}
 .about .section-eyebrow, .about .section-title { text-align: center; }
+.about .section-eyebrow { color: rgba(255, 255, 255, 0.85); }
+.about .section-title { color: var(--color-white); }
 
 .about-text p {
-  color: var(--color-ink-soft);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 1.05rem;
 }
 
@@ -409,13 +441,45 @@ section { padding: 110px 0; }
   font-family: var(--font-display);
   font-size: 2.4rem;
   font-weight: 700;
-  color: var(--color-rose-dark);
+  color: var(--color-white);
 }
 
 .stat-label {
   font-size: 0.85rem;
-  color: var(--color-ink-soft);
+  color: rgba(255, 255, 255, 0.75);
   letter-spacing: 0.02em;
+}
+
+/* ===== Marquee ===== */
+.marquee {
+  padding: 32px 0;
+  overflow: hidden;
+  background: var(--color-bg-alt);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 20px;
+  animation: marquee-scroll 26s linear infinite;
+  white-space: nowrap;
+}
+
+.marquee-track span {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-rose-dark);
+}
+
+.marquee-dot {
+  color: var(--color-ink-soft) !important;
+  font-weight: 400 !important;
+}
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 /* ===== Gallery ===== */
