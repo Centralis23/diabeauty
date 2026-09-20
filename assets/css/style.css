@@ -281,72 +281,6 @@ img, video { max-width: 100%; display: block; }
 
 section { padding: 110px 0; }
 
-/* ===== Mosaic teaser ===== */
-.mosaic { padding: 0; }
-
-.mosaic-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3px;
-}
-
-.mosaic-tile {
-  position: relative;
-  aspect-ratio: 1 / 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  text-decoration: none;
-  overflow: hidden;
-}
-
-.mosaic-tile-photo {
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.6s ease;
-}
-
-.mosaic-tile-photo:hover { transform: scale(1.04); }
-
-.mosaic-dash {
-  width: 28px;
-  height: 2px;
-  background: var(--color-ink);
-  margin-bottom: 18px;
-}
-
-.mosaic-dash-light { background: var(--color-white); }
-
-.mosaic-label {
-  font-family: var(--font-display);
-  font-size: 1.3rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--color-ink);
-}
-
-.mosaic-label-light { color: var(--color-white); }
-
-.mosaic-cta {
-  margin-top: 18px;
-  font-size: 0.82rem;
-  letter-spacing: 0.03em;
-  color: var(--color-ink-soft);
-  opacity: 0;
-  transform: translateY(6px);
-  transition: opacity var(--transition), transform var(--transition);
-}
-
-.mosaic-cta-light { color: rgba(255, 255, 255, 0.85); }
-
-.mosaic-tile-color:hover .mosaic-cta {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* ===== Services ===== */
 .services { background: var(--color-bg); }
 
@@ -654,9 +588,6 @@ section { padding: 110px 0; }
   .main-nav.open a { color: var(--color-ink); }
 
   .hero-subtitle { font-size: 0.92rem; max-width: 320px; }
-
-  .mosaic-grid { grid-template-columns: repeat(2, 1fr); }
-  .mosaic-label { font-size: 1.05rem; }
 
   .contact-inner { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
