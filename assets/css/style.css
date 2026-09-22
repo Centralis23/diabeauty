@@ -414,17 +414,48 @@ section { padding: 110px 0; }
 
 /* ===== Full-width video ===== */
 .video-full {
+  position: relative;
+  padding: 0;
   height: 70vh;
   min-height: 420px;
   max-height: 720px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .video-full video {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+  object-position: center 35%;
+}
+
+.video-full-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(30, 20, 18, 0.15) 0%, rgba(30, 20, 18, 0.55) 100%);
+}
+
+.video-full-content {
+  position: relative;
+  max-width: 720px;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.video-full-eyebrow { color: rgba(255, 255, 255, 0.85); margin-bottom: 18px; }
+
+.video-full-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--color-white);
+  margin: 0;
 }
 
 /* ===== Services bubbles ===== */
