@@ -442,18 +442,17 @@ section { padding: 110px 0; }
 
 .video-full-content {
   position: relative;
-  max-width: 720px;
+  max-width: 780px;
   padding: 0 24px;
   text-align: center;
 }
 
-.video-full-eyebrow { color: rgba(255, 255, 255, 0.85); margin-bottom: 18px; }
-
 .video-full-title {
-  font-family: var(--font-display);
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
-  font-weight: 600;
-  line-height: 1.35;
+  font-family: var(--font-body);
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  line-height: 1.85;
   color: var(--color-white);
   margin: 0;
 }
