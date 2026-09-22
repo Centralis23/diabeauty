@@ -387,7 +387,7 @@ section { padding: 110px 0; }
 .marquee {
   padding: 16px 0;
   overflow: hidden;
-  background: var(--color-rose-dark);
+  background: #e09e94;
 }
 
 .marquee-track {
