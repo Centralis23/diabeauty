@@ -385,7 +385,7 @@ section { padding: 110px 0; }
 
 /* ===== Marquee ===== */
 .marquee {
-  padding: 16px 0;
+  padding: 9px 0;
   overflow: hidden;
   background: #e09e94;
 }
@@ -440,56 +440,53 @@ section { padding: 110px 0; }
   background: linear-gradient(180deg, rgba(30, 20, 18, 0.15) 0%, rgba(30, 20, 18, 0.55) 100%);
 }
 
-/* ===== Services bubbles ===== */
+/* ===== Services tiles ===== */
 .bubbles { text-align: center; padding: 90px 24px; }
 
 .bubbles-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 28px;
-  max-width: 1320px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1100px;
   margin: 0 auto;
-  flex-wrap: wrap;
 }
 
-.bubble {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 18px;
-  text-decoration: none;
-  width: 200px;
-}
-
-.bubble-circle {
-  position: relative;
-  width: 190px;
-  height: 190px;
-  border-radius: 50%;
-  overflow: hidden;
+.tile {
   display: flex;
   align-items: center;
   justify-content: center;
+  aspect-ratio: 3.6 / 1;
+  border-radius: 14px;
+  overflow: hidden;
   box-shadow: var(--shadow-soft);
+  text-decoration: none;
   transition: transform var(--transition);
 }
 
-.bubble:hover .bubble-circle { transform: scale(1.06); }
+.tile:hover { transform: translateY(-4px); }
 
-.bubble-circle-color {
+.tile-photo {
+  background-color: #ead8ca;
+}
+
+.tile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.tile-color {
   background-image: url('../img/hero-grain.png'), linear-gradient(to bottom, #ead8ca, #e6d4c6);
   background-repeat: repeat, no-repeat;
   background-size: 200px 200px, 100% 100%;
   background-blend-mode: overlay, normal;
 }
 
-.bubble-name {
-  position: relative;
+.tile-name {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 1.15rem;
-  line-height: 1.25;
+  font-size: 1.2rem;
   color: var(--color-rose-dark);
   padding: 0 18px;
   text-shadow:
@@ -671,17 +668,9 @@ section { padding: 110px 0; }
   .video-full { height: 50vh; min-height: 320px; }
 
   .bubbles { padding: 56px 24px; }
-  .bubbles-row {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    justify-content: flex-start;
-    gap: 24px;
-    padding: 0 8px 10px;
-    -webkit-overflow-scrolling: touch;
-  }
-  .bubble { flex: none; width: 150px; }
-  .bubble-circle { width: 140px; height: 140px; }
-  .bubble-name { font-size: 1rem; }
+  .bubbles-row { grid-template-columns: 1fr; gap: 16px; }
+  .tile { aspect-ratio: 3 / 1; }
+  .tile-name { font-size: 1.05rem; }
 
   .contact-inner { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
