@@ -452,13 +452,19 @@ section { padding: 110px 0; }
 
 .bubble:hover .bubble-circle { transform: scale(1.06); }
 
-.bubble-circle-color { background: var(--color-rose-dark); }
-.bubble-circle-tan { background: #c9a08d; }
-.bubble-circle-brown { background: #7c6a5f; }
+.bubble-circle-color {
+  background-image: url('../img/hero-grain.png'), linear-gradient(to bottom, #ead8ca, #e6d4c6);
+  background-repeat: repeat, no-repeat;
+  background-size: 200px 200px, 100% 100%;
+  background-blend-mode: overlay, normal;
+}
 
 .bubble-icon {
   font-size: 2.2rem;
-  color: var(--color-white);
+  color: var(--color-rose-dark);
+  text-shadow:
+    -0.5px -0.5px 0 rgba(255, 255, 255, 0.8),
+    0.5px 0.5px 1px rgba(110, 82, 54, 0.35);
 }
 
 .bubble-circle-photo img {
