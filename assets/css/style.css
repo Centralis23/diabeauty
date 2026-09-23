@@ -536,8 +536,8 @@ section { padding: 110px 0; }
   align-items: center;
   justify-content: center;
   height: 40px;
-  background: #eab9ae;
-  border: 1px solid #eab9ae;
+  background: #f5d6d0;
+  border: 1px solid #f5d6d0;
   border-radius: 8px;
   padding: 0 10px;
   font-family: var(--font-body);
@@ -571,7 +571,7 @@ section { padding: 110px 0; }
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background: var(--color-gold);
+  background: var(--color-rose-dark);
   border: 2px solid var(--color-white);
 }
 
@@ -590,7 +590,7 @@ section { padding: 110px 0; }
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--color-gold);
+  background: var(--color-rose-dark);
   flex-shrink: 0;
 }
 
