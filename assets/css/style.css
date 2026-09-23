@@ -503,8 +503,8 @@ section { padding: 110px 0; }
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
-  border-radius: 50% 50% 0 0 / clamp(70px, 12vw, 160px) clamp(70px, 12vw, 160px) 0 0;
-  padding: clamp(100px, 16vw, 200px) 24px 60px;
+  border-radius: 150px 150px 0 0;
+  padding: 180px 24px 60px;
   text-align: center;
 }
 
@@ -515,7 +515,7 @@ section { padding: 110px 0; }
 
 .welcome-arch-panel .section-eyebrow {
   margin: 0 0 16px;
-  color: var(--color-rose-dark);
+  color: var(--color-ink);
   font-family: 'Marcellus', serif;
   font-weight: 400;
   font-size: clamp(1.8rem, 3.4vw, 2.4rem);
@@ -754,6 +754,10 @@ section { padding: 110px 0; }
   .bubble-thumb-name { font-size: 0.85rem; padding: 0 8px; }
 
   .welcome-arch { padding: 32px 0 48px; }
+  .welcome-arch-panel {
+    border-radius: 90px 90px 0 0;
+    padding: 120px 24px 48px;
+  }
   .welcome-arch-panel p:not(.section-eyebrow) { font-size: 1.05rem; }
 
   .contact-inner { grid-template-columns: 1fr; }
