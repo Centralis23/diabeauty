@@ -496,8 +496,6 @@ section { padding: 110px 0; }
 
 .welcome-arch-panel {
   width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
   background-color: var(--color-bg-alt);
   background-image:
     linear-gradient(rgba(247, 236, 230, 0.68), rgba(247, 236, 230, 0.68)),
@@ -505,8 +503,8 @@ section { padding: 110px 0; }
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
-  border-radius: 50% 50% 0 0 / min(450px, 50vw) min(450px, 50vw) 0 0;
-  padding: calc(min(450px, 50vw) + 24px) 24px 60px;
+  border-radius: 50% 50% 0 0 / 50vw 50vw 0 0;
+  padding: calc(50vw + 24px) 24px 60px;
   text-align: center;
 }
 
