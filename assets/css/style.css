@@ -443,13 +443,33 @@ section { padding: 110px 0; }
 
 /* ===== Intro text ===== */
 .intro-text {
-  max-width: 720px;
+  max-width: 620px;
   margin: 0 auto;
-  padding: 100px 24px;
+  padding: 110px 24px;
   text-align: center;
 }
 
-.intro-text .section-eyebrow { margin-bottom: 18px; color: var(--color-ink); font-size: 1.05rem; }
+.intro-text .section-eyebrow {
+  margin: 0 0 26px;
+  color: var(--color-rose-dark);
+  font-size: 0.92rem;
+  letter-spacing: 0.32em;
+  position: relative;
+  padding-bottom: 22px;
+}
+
+.intro-text .section-eyebrow::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 46px;
+  height: 1px;
+  background: var(--color-rose-dark);
+  opacity: 0.45;
+}
+
 .intro-text .section-title {
   font-family: 'Italiana', serif;
   font-weight: 400;
@@ -457,9 +477,11 @@ section { padding: 110px 0; }
 }
 
 .intro-text p:not(.section-eyebrow) {
-  color: var(--color-ink);
-  font-size: 1.05rem;
-  line-height: 1.75;
+  color: var(--color-ink-soft);
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.7;
 }
 
 /* ===== Services bubbles ===== */
