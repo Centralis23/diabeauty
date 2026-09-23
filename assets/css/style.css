@@ -443,7 +443,7 @@ section { padding: 110px 0; }
 
 /* ===== Services bubbles (top) ===== */
 .bubbles-top {
-  padding: 90px 24px 0;
+  padding: 60px 24px 0;
   text-align: center;
 }
 
@@ -491,14 +491,20 @@ section { padding: 110px 0; }
 
 /* ===== Welcome arch ===== */
 .welcome-arch {
-  padding: 56px 0 100px;
+  padding: 40px 0 64px;
 }
 
 .welcome-arch-panel {
   width: 100%;
-  background: linear-gradient(165deg, #fdfaf7 0%, #f6ece5 55%, #efdcd6 100%);
-  border-radius: 50% 50% 0 0 / clamp(90px, 15vw, 200px) clamp(90px, 15vw, 200px) 0 0;
-  padding: clamp(120px, 20vw, 260px) 24px 80px;
+  background-color: var(--color-bg-alt);
+  background-image:
+    linear-gradient(rgba(247, 236, 230, 0.68), rgba(247, 236, 230, 0.68)),
+    url('../img/arch-braids.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  border-radius: 50% 50% 0 0 / clamp(70px, 12vw, 160px) clamp(70px, 12vw, 160px) 0 0;
+  padding: clamp(100px, 16vw, 200px) 24px 60px;
   text-align: center;
 }
 
@@ -507,32 +513,14 @@ section { padding: 110px 0; }
   margin: 0 auto;
 }
 
-.welcome-arch-badge {
-  display: block;
-  width: clamp(220px, 30vw, 380px);
-  height: clamp(220px, 30vw, 380px);
-  margin: 0 auto clamp(28px, 4vw, 40px);
-  border-radius: 50%;
-  overflow: hidden;
-  border: 6px solid var(--color-white);
-  box-shadow: 0 20px 40px rgba(43, 36, 34, 0.18);
-}
-
-.welcome-arch-badge img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-}
-
 .welcome-arch-panel .section-eyebrow {
-  margin: 0 0 10px;
+  margin: 0 0 16px;
   color: var(--color-rose-dark);
-  font-family: 'Parisienne', cursive;
+  font-family: 'Marcellus', serif;
   font-weight: 400;
-  font-size: clamp(2.4rem, 5vw, 3.4rem);
-  letter-spacing: 0.01em;
-  text-transform: none;
+  font-size: clamp(1.8rem, 3.4vw, 2.4rem);
+  letter-spacing: 0.05em;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6), 0 0 24px rgba(255, 255, 255, 0.5);
 }
 
 .section-eyebrow-divider {
@@ -558,13 +546,14 @@ section { padding: 110px 0; }
 }
 
 .welcome-arch-panel p:not(.section-eyebrow) {
-  color: var(--color-ink-soft);
-  font-family: var(--font-display);
+  color: var(--color-ink);
+  font-family: 'Cormorant Garamond', serif;
   font-weight: 500;
-  font-size: 1.25rem;
-  line-height: 1.75;
+  font-size: 1.2rem;
+  line-height: 1.7;
   max-width: 620px;
-  margin: 0 auto 40px;
+  margin: 0 auto 32px;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.55), 0 0 20px rgba(255, 255, 255, 0.45);
 }
 
 .btn-outline-rose {
@@ -573,7 +562,7 @@ section { padding: 110px 0; }
   border-radius: 999px;
   border: 1px solid var(--color-rose-dark);
   color: var(--color-rose-dark);
-  background: transparent;
+  background: rgba(253, 250, 247, 0.75);
   text-transform: uppercase;
   letter-spacing: 0.16em;
   font-size: 0.8rem;
@@ -759,13 +748,12 @@ section { padding: 110px 0; }
 
   .video-full { height: 40vh; min-height: 260px; }
 
-  .bubbles-top { padding: 56px 24px 0; }
+  .bubbles-top { padding: 40px 24px 0; }
   .bubbles-top-row { gap: 20px; }
   .bubble-thumb-circle { width: 130px; height: 130px; }
   .bubble-thumb-name { font-size: 0.85rem; padding: 0 8px; }
 
-  .welcome-arch { padding: 40px 0 64px; }
-  .welcome-arch-panel .section-eyebrow { letter-spacing: normal; }
+  .welcome-arch { padding: 32px 0 48px; }
   .welcome-arch-panel p:not(.section-eyebrow) { font-size: 1.05rem; }
 
   .contact-inner { grid-template-columns: 1fr; }
