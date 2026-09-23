@@ -497,10 +497,10 @@ section { padding: 110px 0; }
 .welcome-arch-panel {
   width: 100%;
   background-image:
-    linear-gradient(rgba(247, 236, 230, 0.86), rgba(247, 236, 230, 0.86)),
+    linear-gradient(rgba(247, 236, 230, 0.5), rgba(247, 236, 230, 0.5)),
     url('../img/arch-braids.jpg');
   background-size: cover;
-  background-position: center 25%;
+  background-position: center top;
   border-radius: 50% 50% 0 0 / clamp(90px, 24vw, 380px) clamp(90px, 24vw, 380px) 0 0;
   padding: clamp(150px, 30vw, 420px) 24px 70px;
   text-align: center;
@@ -513,7 +513,7 @@ section { padding: 110px 0; }
 
 .welcome-arch-panel .section-eyebrow {
   margin: 0 0 22px;
-  color: var(--color-rose-dark);
+  color: var(--color-ink);
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 2.1rem;
@@ -543,7 +543,7 @@ section { padding: 110px 0; }
 }
 
 .welcome-arch-panel p:not(.section-eyebrow) {
-  color: var(--color-ink-soft);
+  color: var(--color-ink);
   font-family: var(--font-display);
   font-weight: 500;
   font-size: 1.25rem;
