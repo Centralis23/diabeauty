@@ -526,12 +526,13 @@ section { padding: 110px 0; }
 }
 
 .welcome-arch-panel .section-eyebrow {
-  margin: 0 0 22px;
+  margin: 0 0 10px;
   color: var(--color-rose-dark);
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 2.1rem;
-  letter-spacing: 0.14em;
+  font-family: 'Parisienne', cursive;
+  font-weight: 400;
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  letter-spacing: 0.01em;
+  text-transform: none;
 }
 
 .section-eyebrow-divider {
@@ -764,7 +765,7 @@ section { padding: 110px 0; }
   .bubble-thumb-name { font-size: 0.85rem; padding: 0 8px; }
 
   .welcome-arch { padding: 40px 0 64px; }
-  .welcome-arch-panel .section-eyebrow { font-size: 1.5rem; letter-spacing: 0.08em; }
+  .welcome-arch-panel .section-eyebrow { letter-spacing: normal; }
   .welcome-arch-panel p:not(.section-eyebrow) { font-size: 1.05rem; }
 
   .contact-inner { grid-template-columns: 1fr; }
