@@ -458,16 +458,17 @@ section { padding: 110px 0; }
 
 .bubble-thumb {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
   text-decoration: none;
 }
 
 .bubble-thumb-circle {
-  width: 130px;
-  height: 130px;
+  position: relative;
+  width: 176px;
+  height: 176px;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(160deg, #f5e5d8 0%, #efd7c4 100%);
   border: 1px solid rgba(169, 103, 113, 0.22);
   box-shadow: 0 12px 24px rgba(43, 36, 34, 0.08);
@@ -482,24 +483,28 @@ section { padding: 110px 0; }
 .bubble-thumb-name {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 0.92rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: 1.1rem;
+  line-height: 1.25;
   color: var(--color-rose-dark);
+  padding: 0 14px;
 }
 
 /* ===== Welcome arch ===== */
 .welcome-arch {
-  padding: 56px 24px 100px;
+  padding: 56px 0 100px;
 }
 
 .welcome-arch-panel {
-  max-width: 940px;
-  margin: 0 auto;
+  width: 100%;
   background: var(--color-bg-alt);
-  border-radius: 460px 460px 28px 28px;
-  padding: 190px 60px 70px;
+  border-radius: 50% 50% 0 0 / 140px 140px 0 0;
+  padding: 200px 24px 70px;
   text-align: center;
+}
+
+.welcome-arch-inner {
+  max-width: 780px;
+  margin: 0 auto;
 }
 
 .welcome-arch-panel .section-eyebrow {
@@ -736,14 +741,14 @@ section { padding: 110px 0; }
   .video-full { height: 40vh; min-height: 260px; }
 
   .bubbles-top { padding: 56px 24px 0; }
-  .bubbles-top-row { gap: 28px; }
-  .bubble-thumb-circle { width: 96px; height: 96px; }
-  .bubble-thumb-name { font-size: 0.78rem; }
+  .bubbles-top-row { gap: 20px; }
+  .bubble-thumb-circle { width: 130px; height: 130px; }
+  .bubble-thumb-name { font-size: 0.85rem; padding: 0 8px; }
 
-  .welcome-arch { padding: 40px 16px 64px; }
+  .welcome-arch { padding: 40px 0 64px; }
   .welcome-arch-panel {
-    border-radius: 220px 220px 24px 24px;
-    padding: 120px 28px 48px;
+    border-radius: 50% 50% 0 0 / 70px 70px 0 0;
+    padding: 120px 24px 48px;
   }
   .welcome-arch-panel .section-eyebrow { font-size: 1.5rem; letter-spacing: 0.08em; }
   .welcome-arch-panel p:not(.section-eyebrow) { font-size: 1.05rem; }
