@@ -496,9 +496,13 @@ section { padding: 110px 0; }
 
 .welcome-arch-panel {
   width: 100%;
-  background: var(--color-bg-alt);
-  border-radius: 50% 50% 0 0 / 140px 140px 0 0;
-  padding: 200px 24px 70px;
+  background-image:
+    linear-gradient(rgba(247, 236, 230, 0.86), rgba(247, 236, 230, 0.86)),
+    url('../img/arch-braids.jpg');
+  background-size: cover;
+  background-position: center 25%;
+  border-radius: 50% 50% 0 0 / clamp(90px, 24vw, 380px) clamp(90px, 24vw, 380px) 0 0;
+  padding: clamp(150px, 30vw, 420px) 24px 70px;
   text-align: center;
 }
 
@@ -746,10 +750,6 @@ section { padding: 110px 0; }
   .bubble-thumb-name { font-size: 0.85rem; padding: 0 8px; }
 
   .welcome-arch { padding: 40px 0 64px; }
-  .welcome-arch-panel {
-    border-radius: 50% 50% 0 0 / 70px 70px 0 0;
-    padding: 120px 24px 48px;
-  }
   .welcome-arch-panel .section-eyebrow { font-size: 1.5rem; letter-spacing: 0.08em; }
   .welcome-arch-panel p:not(.section-eyebrow) { font-size: 1.05rem; }
 
