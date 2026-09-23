@@ -501,8 +501,8 @@ section { padding: 110px 0; }
     url('../img/arch-braids.jpg');
   background-size: cover;
   background-position: center top;
-  border-radius: 50% 50% 0 0 / clamp(90px, 24vw, 380px) clamp(90px, 24vw, 380px) 0 0;
-  padding: clamp(150px, 30vw, 420px) 24px 70px;
+  border-radius: 50% 50% 0 0 / clamp(160px, 45vw, 620px) clamp(160px, 45vw, 620px) 0 0;
+  padding: clamp(200px, 50vw, 680px) 24px 70px;
   text-align: center;
 }
 
