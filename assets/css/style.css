@@ -462,6 +462,56 @@ section { padding: 110px 0; }
   line-height: 1.75;
 }
 
+/* ===== Services bubbles ===== */
+.bubbles { text-align: center; padding: 0 24px 100px; }
+
+.bubbles-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  max-width: 1320px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.bubble {
+  display: flex;
+  text-decoration: none;
+}
+
+.bubble-circle {
+  position: relative;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition);
+  background-image: url('../img/hero-grain.png'), linear-gradient(to bottom, #ead8ca, #e6d4c6);
+  background-repeat: repeat, no-repeat;
+  background-size: 200px 200px, 100% 100%;
+  background-blend-mode: overlay, normal;
+}
+
+.bubble:hover .bubble-circle { transform: scale(1.06); }
+
+.bubble-name {
+  position: relative;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+  line-height: 1.25;
+  color: var(--color-rose-dark);
+  padding: 0 18px;
+  text-shadow:
+    -0.5px -0.5px 0 rgba(255, 255, 255, 0.8),
+    0.5px 0.5px 1px rgba(110, 82, 54, 0.25);
+}
+
 /* ===== Gallery ===== */
 .gallery-grid {
   display: grid;
@@ -636,6 +686,19 @@ section { padding: 110px 0; }
   .video-full { height: 40vh; min-height: 260px; }
 
   .intro-text { padding: 64px 24px; }
+
+  .bubbles { padding: 0 24px 56px; }
+  .bubbles-row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 24px;
+    padding: 0 8px 10px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .bubble { flex: none; }
+  .bubble-circle { width: 140px; height: 140px; }
+  .bubble-name { font-size: 1rem; }
 
   .contact-inner { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
