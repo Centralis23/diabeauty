@@ -496,6 +496,8 @@ section { padding: 110px 0; }
 
 .welcome-arch-panel {
   width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
   background-color: var(--color-bg-alt);
   background-image:
     linear-gradient(rgba(247, 236, 230, 0.68), rgba(247, 236, 230, 0.68)),
@@ -503,8 +505,8 @@ section { padding: 110px 0; }
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
-  border-radius: 150px 150px 0 0;
-  padding: 180px 24px 60px;
+  border-radius: 50% 50% 0 0 / min(450px, 50vw) min(450px, 50vw) 0 0;
+  padding: calc(min(450px, 50vw) + 24px) 24px 60px;
   text-align: center;
 }
 
@@ -514,35 +516,13 @@ section { padding: 110px 0; }
 }
 
 .welcome-arch-panel .section-eyebrow {
-  margin: 0 0 16px;
+  margin: 0 0 24px;
   color: var(--color-ink);
   font-family: 'Marcellus', serif;
   font-weight: 400;
   font-size: clamp(1.8rem, 3.4vw, 2.4rem);
   letter-spacing: 0.05em;
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6), 0 0 24px rgba(255, 255, 255, 0.5);
-}
-
-.section-eyebrow-divider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin: 0 0 36px;
-}
-
-.section-eyebrow-divider .line {
-  width: 40px;
-  height: 1px;
-  background: var(--color-rose-dark);
-  opacity: 0.5;
-}
-
-.section-eyebrow-divider .dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--color-rose-dark);
 }
 
 .welcome-arch-panel p:not(.section-eyebrow) {
@@ -560,8 +540,8 @@ section { padding: 110px 0; }
   display: inline-block;
   padding: 15px 40px;
   border-radius: 999px;
-  border: 1px solid var(--color-rose-dark);
-  color: var(--color-rose-dark);
+  border: 1px solid var(--color-ink);
+  color: var(--color-ink);
   background: rgba(253, 250, 247, 0.75);
   text-transform: uppercase;
   letter-spacing: 0.16em;
@@ -571,7 +551,7 @@ section { padding: 110px 0; }
 }
 
 .btn-outline-rose:hover {
-  background: var(--color-rose-dark);
+  background: var(--color-ink);
   color: var(--color-white);
 }
 
@@ -754,10 +734,6 @@ section { padding: 110px 0; }
   .bubble-thumb-name { font-size: 0.85rem; padding: 0 8px; }
 
   .welcome-arch { padding: 32px 0 48px; }
-  .welcome-arch-panel {
-    border-radius: 90px 90px 0 0;
-    padding: 120px 24px 48px;
-  }
   .welcome-arch-panel p:not(.section-eyebrow) { font-size: 1.05rem; }
 
   .contact-inner { grid-template-columns: 1fr; }
