@@ -50,4 +50,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  const archTrack = document.getElementById('arch-carousel-track');
+  const archPrev = document.querySelector('.arch-carousel-arrow--prev');
+  const archNext = document.querySelector('.arch-carousel-arrow--next');
+  if (archTrack && archPrev && archNext) {
+    const scrollByItem = (direction) => {
+      const item = archTrack.querySelector('.arch-carousel-item');
+      const gap = 22;
+      const amount = item ? item.getBoundingClientRect().width + gap : 230;
+      archTrack.scrollBy({ left: direction * amount, behavior: 'smooth' });
+    };
+    archPrev.addEventListener('click', () => scrollByItem(-1));
+    archNext.addEventListener('click', () => scrollByItem(1));
+  }
+
 });
