@@ -561,18 +561,19 @@ section { padding: 110px 0; }
 
 .services-tag--onrequest {
   position: relative;
+  overflow: hidden;
 }
 
 .services-tag--onrequest::after {
   content: '';
   position: absolute;
-  top: -4px;
-  right: -4px;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--color-rose-dark);
-  border: 2px solid var(--color-white);
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 16px 16px 0;
+  border-color: transparent var(--color-rose-dark) transparent transparent;
 }
 
 .services-tags-legend {
