@@ -50,26 +50,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const archTrack = document.getElementById('arch-feature-track');
-  if (archTrack) {
-    const archItems = Array.from(archTrack.querySelectorAll('.arch-feature-item'));
-    let archCurrent = 0;
-
-    const updateArchFeature = () => {
-      const itemWidth = archItems[0].getBoundingClientRect().width;
-      const gap = parseFloat(getComputedStyle(archTrack).gap) || 0;
-      const step = itemWidth + gap;
-      archTrack.style.transform = `translateX(${-archCurrent * step}px)`;
-      archItems.forEach((el, i) => el.classList.toggle('is-active', i === archCurrent));
-    };
-
-    updateArchFeature();
-    window.addEventListener('resize', updateArchFeature);
-
-    setInterval(() => {
-      archCurrent = (archCurrent + 1) % archItems.length;
-      updateArchFeature();
-    }, 3200);
-  }
-
 });

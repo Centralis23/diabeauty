@@ -448,7 +448,7 @@ section { padding: 110px 0; }
 /* ===== Welcome arch ===== */
 .welcome-arch {
   position: relative;
-  padding: 64px 0 130px;
+  padding: 64px 0 60px;
 }
 
 .welcome-arch-panel {
@@ -595,50 +595,61 @@ section { padding: 110px 0; }
   flex-shrink: 0;
 }
 
-/* ===== Arch carousel (centered feature + peeking neighbours) ===== */
+/* ===== Arch carousel (ligne d'arches, défilement continu, effet 3D) ===== */
 .arch-carousel {
-  padding: 90px 0;
+  padding: 20px 0 90px;
   text-align: center;
 }
 
-.arch-feature-wrap {
-  position: relative;
+.arch-row-wrap {
   overflow: hidden;
+  perspective: 1400px;
 }
 
-.arch-feature-track {
+.arch-row-track {
   display: flex;
   align-items: center;
   width: max-content;
-  gap: 24px;
-  padding-left: calc(50% - 150px);
-  padding-right: calc(50% - 150px);
-  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  gap: 22px;
+  animation: archRowScroll 34s linear infinite;
 }
 
-.arch-feature-item {
-  flex: 0 0 300px;
+.arch-row-wrap:hover .arch-row-track {
+  animation-play-state: paused;
+}
+
+.arch-row-item {
+  flex: 0 0 260px;
   aspect-ratio: 3 / 4;
-  border-radius: 150px 150px 16px 16px;
+  border-radius: 130px 130px 18px 18px;
   overflow: hidden;
-  box-shadow: 0 16px 32px rgba(43, 36, 34, 0.14);
-  transform: scale(0.8);
-  opacity: 0.55;
-  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.7s ease, box-shadow 0.7s ease;
+  box-shadow:
+    0 2px 4px rgba(43, 36, 34, 0.10),
+    0 14px 20px rgba(43, 36, 34, 0.14),
+    0 32px 46px rgba(43, 36, 34, 0.18);
+  transform: perspective(1400px) rotateX(0deg) translateY(0);
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
 }
 
-.arch-feature-item.is-active {
-  transform: scale(1);
-  opacity: 1;
-  box-shadow: 0 28px 54px rgba(43, 36, 34, 0.22);
+.arch-row-item:hover {
+  transform: perspective(1400px) rotateX(4deg) translateY(-12px) scale(1.045);
+  box-shadow:
+    0 4px 8px rgba(43, 36, 34, 0.14),
+    0 20px 30px rgba(43, 36, 34, 0.18),
+    0 46px 64px rgba(43, 36, 34, 0.26);
   z-index: 2;
 }
 
-.arch-feature-item img,
-.arch-feature-item video {
+.arch-row-item img,
+.arch-row-item video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@keyframes archRowScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 /* ===== Gallery ===== */
@@ -786,9 +797,9 @@ section { padding: 110px 0; }
   .main-nav, .nav-cta { display: none; }
   .nav-toggle { display: flex; }
 
-  .arch-carousel { padding: 56px 0; }
-  .arch-feature-track { gap: 14px; padding-left: calc(50% - 100px); padding-right: calc(50% - 100px); }
-  .arch-feature-item { flex-basis: 200px; border-radius: 100px 100px 12px 12px; }
+  .arch-carousel { padding: 16px 0 56px; }
+  .arch-row-track { gap: 14px; animation-duration: 24s; }
+  .arch-row-item { flex-basis: 168px; border-radius: 84px 84px 12px 12px; }
 
   .main-nav.open {
     display: flex;
@@ -808,7 +819,7 @@ section { padding: 110px 0; }
 
   .video-full-media { height: 40vh; min-height: 260px; }
 
-  .welcome-arch { padding: 40px 0 110px; }
+  .welcome-arch { padding: 40px 0 50px; }
   .welcome-arch-panel {
     border-radius: 90px 90px 0 0;
     padding: 115px 24px 48px;
