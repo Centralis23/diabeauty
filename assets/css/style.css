@@ -469,9 +469,9 @@ section { padding: 110px 0; }
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle at 32% 28%, #faf1e9 0%, #f0dbc9 45%, #ddbea3 100%);
+  background: radial-gradient(circle at 32% 28%, #fdf1f2 0%, #f3d7db 45%, #e2b3bd 100%);
   box-shadow:
-    inset 12px 12px 22px rgba(120, 82, 51, 0.4),
+    inset 12px 12px 22px rgba(168, 88, 104, 0.35),
     inset -10px -10px 20px rgba(255, 255, 255, 0.9),
     inset 0 0 0 1px rgba(169, 103, 113, 0.12),
     0 14px 26px rgba(43, 36, 34, 0.14);
@@ -481,7 +481,7 @@ section { padding: 110px 0; }
 .bubble-thumb:hover .bubble-thumb-circle {
   transform: translateY(-3px);
   box-shadow:
-    inset 14px 14px 26px rgba(120, 82, 51, 0.46),
+    inset 14px 14px 26px rgba(168, 88, 104, 0.4),
     inset -10px -10px 22px rgba(255, 255, 255, 0.95),
     inset 0 0 0 1px rgba(169, 103, 113, 0.16),
     0 18px 32px rgba(43, 36, 34, 0.18);
@@ -496,7 +496,7 @@ section { padding: 110px 0; }
   padding: 0 14px;
   text-shadow:
     -1px -1px 1px rgba(255, 255, 255, 0.7),
-    1px 1px 2px rgba(120, 82, 51, 0.35);
+    1px 1px 2px rgba(168, 88, 104, 0.3);
 }
 
 /* ===== Welcome arch ===== */
