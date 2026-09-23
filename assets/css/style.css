@@ -469,22 +469,22 @@ section { padding: 110px 0; }
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle at 32% 28%, #f9f0e9 0%, #e09e94 55%, #a96771 100%);
+  background: #e6a49a;
   box-shadow:
-    inset 12px 12px 22px rgba(168, 88, 104, 0.35),
-    inset -10px -10px 20px rgba(255, 255, 255, 0.9),
-    inset 0 0 0 1px rgba(169, 103, 113, 0.12),
-    0 14px 26px rgba(43, 36, 34, 0.14);
+    inset 16px 16px 30px rgba(107, 42, 47, 0.5),
+    inset -14px -14px 26px rgba(255, 235, 226, 0.85),
+    inset 0 0 0 2px rgba(255, 240, 233, 0.4),
+    0 16px 30px rgba(43, 36, 34, 0.18);
   transition: transform var(--transition), box-shadow var(--transition);
 }
 
 .bubble-thumb:hover .bubble-thumb-circle {
   transform: translateY(-3px);
   box-shadow:
-    inset 14px 14px 26px rgba(168, 88, 104, 0.4),
-    inset -10px -10px 22px rgba(255, 255, 255, 0.95),
-    inset 0 0 0 1px rgba(169, 103, 113, 0.16),
-    0 18px 32px rgba(43, 36, 34, 0.18);
+    inset 18px 18px 34px rgba(107, 42, 47, 0.56),
+    inset -14px -14px 28px rgba(255, 235, 226, 0.9),
+    inset 0 0 0 2px rgba(255, 240, 233, 0.5),
+    0 20px 36px rgba(43, 36, 34, 0.22);
 }
 
 .bubble-thumb-name {
