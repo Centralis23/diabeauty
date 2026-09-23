@@ -595,53 +595,45 @@ section { padding: 110px 0; }
   flex-shrink: 0;
 }
 
-/* ===== Arch carousel (ligne d'arches, défilement continu, effet 3D) ===== */
+/* ===== Arch carousel (élément central + voisins en profondeur, effet 3D) ===== */
 .arch-carousel {
   padding: 20px 0 90px;
   text-align: center;
 }
 
-.arch-row-wrap {
+.arch-feature-wrap {
+  position: relative;
   overflow: hidden;
-  perspective: 1400px;
+  perspective: 900px;
 }
 
-.arch-row-track {
+.arch-feature-track {
   display: flex;
   align-items: center;
   width: max-content;
-  gap: 22px;
-  animation: archRowScroll 34s linear infinite;
+  gap: 24px;
+  padding-left: calc(50% - 150px);
+  padding-right: calc(50% - 150px);
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transform-style: preserve-3d;
 }
 
-.arch-row-wrap:hover .arch-row-track {
-  animation-play-state: paused;
-}
-
-.arch-row-item {
-  flex: 0 0 260px;
+.arch-feature-item {
+  flex: 0 0 300px;
   aspect-ratio: 3 / 4;
-  border-radius: 130px 130px 18px 18px;
+  border-radius: 150px 150px 16px 16px;
   overflow: hidden;
-  box-shadow:
-    0 2px 4px rgba(43, 36, 34, 0.10),
-    0 14px 20px rgba(43, 36, 34, 0.14),
-    0 32px 46px rgba(43, 36, 34, 0.18);
-  transform: perspective(1400px) rotateX(0deg) translateY(0);
-  transition: transform 0.45s ease, box-shadow 0.45s ease;
+  box-shadow: 0 16px 32px rgba(43, 36, 34, 0.16);
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.7s ease, box-shadow 0.7s ease;
 }
 
-.arch-row-item:hover {
-  transform: perspective(1400px) rotateX(4deg) translateY(-12px) scale(1.045);
-  box-shadow:
-    0 4px 8px rgba(43, 36, 34, 0.14),
-    0 20px 30px rgba(43, 36, 34, 0.18),
-    0 46px 64px rgba(43, 36, 34, 0.26);
+.arch-feature-item.is-active {
+  box-shadow: 0 32px 58px rgba(43, 36, 34, 0.28);
   z-index: 2;
 }
 
-.arch-row-item img,
-.arch-row-item video {
+.arch-feature-item img,
+.arch-feature-item video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -798,8 +790,9 @@ section { padding: 110px 0; }
   .nav-toggle { display: flex; }
 
   .arch-carousel { padding: 16px 0 56px; }
-  .arch-row-track { gap: 14px; animation-duration: 24s; }
-  .arch-row-item { flex-basis: 168px; border-radius: 84px 84px 12px 12px; }
+  .arch-feature-wrap { perspective: 700px; }
+  .arch-feature-track { gap: 14px; padding-left: calc(50% - 100px); padding-right: calc(50% - 100px); }
+  .arch-feature-item { flex-basis: 200px; border-radius: 100px 100px 12px 12px; }
 
   .main-nav.open {
     display: flex;

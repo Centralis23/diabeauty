@@ -50,4 +50,43 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  const archTrack = document.getElementById('arch-feature-track');
+  if (archTrack) {
+    const archItems = Array.from(archTrack.querySelectorAll('.arch-feature-item'));
+    let archCurrent = 0;
+    const isCompact = () => window.matchMedia('(max-width: 860px)').matches;
+
+    const updateArchFeature = () => {
+      const itemWidth = archItems[0].getBoundingClientRect().width;
+      const gap = parseFloat(getComputedStyle(archTrack).gap) || 0;
+      const step = itemWidth + gap;
+      archTrack.style.transform = `translateX(${-archCurrent * step}px)`;
+
+      const compact = isCompact();
+      const rotateStep = compact ? -26 : -42;
+      const depthStep = compact ? -70 : -180;
+      const scaleStep = compact ? 0.15 : 0.24;
+
+      archItems.forEach((el, i) => {
+        const diff = i - archCurrent;
+        const clamped = Math.max(-2, Math.min(2, diff));
+        const rotate = clamped * rotateStep;
+        const depth = Math.abs(clamped) * depthStep;
+        const scale = 1 - Math.abs(clamped) * scaleStep;
+        const opacity = clamped === 0 ? 1 : Math.max(0.4, 1 - Math.abs(clamped) * 0.28);
+        el.style.transform = `rotateY(${rotate}deg) translateZ(${depth}px) scale(${scale})`;
+        el.style.opacity = String(opacity);
+        el.classList.toggle('is-active', diff === 0);
+      });
+    };
+
+    updateArchFeature();
+    window.addEventListener('resize', updateArchFeature);
+
+    setInterval(() => {
+      archCurrent = (archCurrent + 1) % archItems.length;
+      updateArchFeature();
+    }, 3200);
+  }
+
 });
