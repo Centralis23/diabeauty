@@ -559,6 +559,41 @@ section { padding: 110px 0; }
   color: var(--color-white);
 }
 
+.services-tag--onrequest {
+  position: relative;
+}
+
+.services-tag--onrequest::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--color-gold);
+  border: 2px solid var(--color-white);
+}
+
+.services-tags-legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin: 14px 0 0;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  color: var(--color-ink-soft);
+}
+
+.services-tags-legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-gold);
+  flex-shrink: 0;
+}
+
 /* ===== Gallery ===== */
 .gallery-grid {
   display: grid;
