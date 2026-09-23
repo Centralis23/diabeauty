@@ -445,7 +445,7 @@ section { padding: 110px 0; }
 .intro-text {
   max-width: 620px;
   margin: 0 auto;
-  padding: 110px 24px;
+  padding: 110px 24px 56px;
   text-align: center;
 }
 
@@ -480,19 +480,19 @@ section { padding: 110px 0; }
   color: var(--color-ink-soft);
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: 1.3rem;
-  line-height: 1.7;
+  font-size: 1.15rem;
+  line-height: 1.75;
 }
 
 /* ===== Services bubbles ===== */
-.bubbles { text-align: center; padding: 0 24px 100px; }
+.bubbles { text-align: center; padding: 20px 24px 110px; }
 
 .bubbles-row {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 28px;
-  max-width: 1320px;
+  gap: 22px;
+  max-width: 1180px;
   margin: 0 auto;
   flex-wrap: wrap;
 }
@@ -504,8 +504,8 @@ section { padding: 110px 0; }
 
 .bubble-circle {
   position: relative;
-  width: 190px;
-  height: 190px;
+  width: 168px;
+  height: 168px;
   border-radius: 50%;
   overflow: hidden;
   display: flex;
@@ -540,10 +540,10 @@ section { padding: 110px 0; }
   position: relative;
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   line-height: 1.25;
   color: var(--color-rose-dark);
-  padding: 0 18px;
+  padding: 0 16px;
   text-shadow:
     -0.5px -0.5px 0 rgba(255, 255, 255, 0.8),
     0.5px 0.5px 1px rgba(110, 82, 54, 0.25);
