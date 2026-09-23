@@ -503,8 +503,8 @@ section { padding: 110px 0; }
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
-  border-radius: 50% 50% 0 0 / 50vw 50vw 0 0;
-  padding: calc(50vw + 24px) 24px 60px;
+  border-radius: 120px 120px 0 0;
+  padding: 150px 24px 60px;
   text-align: center;
 }
 
@@ -732,6 +732,10 @@ section { padding: 110px 0; }
   .bubble-thumb-name { font-size: 0.85rem; padding: 0 8px; }
 
   .welcome-arch { padding: 32px 0 48px; }
+  .welcome-arch-panel {
+    border-radius: 90px 90px 0 0;
+    padding: 115px 24px 48px;
+  }
   .welcome-arch-panel p:not(.section-eyebrow) { font-size: 1.05rem; }
 
   .contact-inner { grid-template-columns: 1fr; }
