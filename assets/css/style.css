@@ -525,24 +525,28 @@ section { padding: 110px 0; }
 .services-tags-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
+  gap: 8px;
 }
 
 .services-tag {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 40px;
   background: var(--color-ink);
   border: 1px solid var(--color-ink);
   border-radius: 8px;
-  padding: 11px 14px;
+  padding: 0 10px;
   font-family: var(--font-body);
   font-weight: 400;
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   letter-spacing: 0.01em;
   color: var(--color-white);
   text-align: center;
   text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   transition: background var(--transition), color var(--transition), border-color var(--transition);
 }
 
@@ -725,7 +729,7 @@ section { padding: 110px 0; }
   .welcome-arch-panel p:not(.section-eyebrow) { font-size: 1.05rem; }
   .services-tags-card { padding: 16px; margin-top: -40px; border-radius: 14px; }
   .services-tags-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
-  .services-tag { padding: 10px 10px; font-size: 0.8rem; }
+  .services-tag { height: 38px; padding: 0 8px; font-size: 0.72rem; }
 
   .contact-inner { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
