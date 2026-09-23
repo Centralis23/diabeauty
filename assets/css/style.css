@@ -523,12 +523,14 @@ section { padding: 110px 0; }
 }
 
 .services-tags-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 8px;
 }
 
 .services-tag {
+  flex: 0 1 160px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -728,8 +730,7 @@ section { padding: 110px 0; }
   }
   .welcome-arch-panel p:not(.section-eyebrow) { font-size: 1.05rem; }
   .services-tags-card { padding: 16px; margin-top: -40px; border-radius: 14px; }
-  .services-tags-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
-  .services-tag { height: 38px; padding: 0 8px; font-size: 0.72rem; }
+  .services-tag { flex: 0 1 47%; height: 38px; padding: 0 8px; font-size: 0.72rem; }
 
   .contact-inner { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
