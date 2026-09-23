@@ -443,10 +443,14 @@ section { padding: 110px 0; }
 
 /* ===== Intro text ===== */
 .intro-text {
-  max-width: 780px;
-  margin: 0 auto;
+  background: var(--color-bg-alt);
   padding: 110px 24px 56px;
   text-align: center;
+}
+
+.intro-text-inner {
+  max-width: 780px;
+  margin: 0 auto;
 }
 
 .intro-text .section-eyebrow {
@@ -495,7 +499,7 @@ section { padding: 110px 0; }
 }
 
 /* ===== Services bubbles ===== */
-.bubbles { text-align: center; padding: 20px 24px 110px; }
+.bubbles { background: var(--color-bg-alt); text-align: center; padding: 20px 24px 110px; }
 
 .bubbles-row {
   display: flex;
@@ -522,16 +526,28 @@ section { padding: 110px 0; }
   align-items: center;
   justify-content: center;
   transition: transform var(--transition), box-shadow var(--transition);
-  background-image: url('../img/hero-grain.png'), linear-gradient(160deg, #f5e5d8 0%, #efd7c4 100%);
-  background-repeat: repeat, no-repeat;
-  background-size: 200px 200px, 100% 100%;
-  background-blend-mode: overlay, normal;
-  box-shadow: var(--shadow-soft);
+  background-image:
+    radial-gradient(circle at 32% 26%, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0) 42%),
+    radial-gradient(circle at 72% 78%, rgba(139, 108, 73, 0.2) 0%, rgba(139, 108, 73, 0) 55%),
+    url('../img/hero-grain.png'),
+    linear-gradient(160deg, #f5e5d8 0%, #efd7c4 100%);
+  background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+  background-size: 100% 100%, 100% 100%, 200px 200px, 100% 100%;
+  background-blend-mode: normal, normal, overlay, normal;
+  box-shadow:
+    10px 12px 22px rgba(120, 88, 58, 0.26),
+    -8px -8px 18px rgba(255, 255, 255, 0.8),
+    inset 3px 4px 6px rgba(255, 255, 255, 0.5),
+    inset -4px -5px 10px rgba(120, 88, 58, 0.2);
 }
 
 .bubble:hover .bubble-circle {
-  transform: translateY(-4px);
-  box-shadow: 0 26px 46px rgba(43, 36, 34, 0.14);
+  transform: translateY(-4px) scale(1.04);
+  box-shadow:
+    14px 16px 28px rgba(120, 88, 58, 0.3),
+    -10px -10px 22px rgba(255, 255, 255, 0.85),
+    inset 3px 4px 6px rgba(255, 255, 255, 0.55),
+    inset -4px -5px 10px rgba(120, 88, 58, 0.22);
 }
 
 .bubble-name {
@@ -557,7 +573,18 @@ section { padding: 110px 0; }
   letter-spacing: 0.16em;
   font-size: 0.82rem;
   font-weight: 500;
-  box-shadow: 0 16px 32px rgba(169, 103, 113, 0.35);
+  box-shadow:
+    0 16px 32px rgba(169, 103, 113, 0.38),
+    inset 0 2px 3px rgba(255, 255, 255, 0.35),
+    inset 0 -4px 7px rgba(83, 42, 49, 0.4);
+}
+
+.bubbles-cta .btn:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 22px 40px rgba(169, 103, 113, 0.42),
+    inset 0 2px 3px rgba(255, 255, 255, 0.4),
+    inset 0 -4px 7px rgba(83, 42, 49, 0.45);
 }
 
 /* ===== Gallery ===== */
