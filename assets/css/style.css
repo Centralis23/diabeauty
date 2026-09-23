@@ -496,13 +496,15 @@ section { padding: 110px 0; }
 
 .welcome-arch-panel {
   width: 100%;
+  background-color: var(--color-bg-alt);
   background-image:
-    linear-gradient(rgba(247, 236, 230, 0.86), rgba(247, 236, 230, 0.86)),
+    linear-gradient(rgba(247, 236, 230, 0.68), rgba(247, 236, 230, 0.68)),
     url('../img/arch-braids.jpg');
-  background-size: cover;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
   background-position: center top;
-  border-radius: 50% 50% 0 0 / clamp(120px, 22vw, 280px) clamp(120px, 22vw, 280px) 0 0;
-  padding: clamp(160px, 26vw, 320px) 24px 70px;
+  border-radius: 50% 50% 0 0 / clamp(180px, 32vw, 420px) clamp(180px, 32vw, 420px) 0 0;
+  padding: clamp(210px, 38vw, 480px) 24px 70px;
   text-align: center;
 }
 
