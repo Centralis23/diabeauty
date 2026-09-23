@@ -50,18 +50,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const archTrack = document.getElementById('arch-carousel-track');
-  const archPrev = document.querySelector('.arch-carousel-arrow--prev');
-  const archNext = document.querySelector('.arch-carousel-arrow--next');
-  if (archTrack && archPrev && archNext) {
-    const scrollByItem = (direction) => {
-      const item = archTrack.querySelector('.arch-carousel-item');
-      const gap = 22;
-      const amount = item ? item.getBoundingClientRect().width + gap : 230;
-      archTrack.scrollBy({ left: direction * amount, behavior: 'smooth' });
+  const archStack = document.getElementById('arch-stack');
+  if (archStack) {
+    const archItems = Array.from(archStack.querySelectorAll('.arch-stack-item'));
+    let archCurrent = 0;
+    const updateArchStack = () => {
+      archItems.forEach((el, i) => {
+        const pos = (i - archCurrent + archItems.length) % archItems.length;
+        el.dataset.pos = pos > 3 ? 'rest' : String(pos);
+      });
     };
-    archPrev.addEventListener('click', () => scrollByItem(-1));
-    archNext.addEventListener('click', () => scrollByItem(1));
+    updateArchStack();
+    setInterval(() => {
+      archCurrent = (archCurrent + 1) % archItems.length;
+      updateArchStack();
+    }, 3200);
   }
 
 });
