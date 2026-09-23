@@ -50,21 +50,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const archStack = document.getElementById('arch-stack');
-  if (archStack) {
-    const archItems = Array.from(archStack.querySelectorAll('.arch-stack-item'));
-    let archCurrent = 0;
-    const updateArchStack = () => {
-      archItems.forEach((el, i) => {
-        const pos = (i - archCurrent + archItems.length) % archItems.length;
-        el.dataset.pos = pos > 3 ? 'rest' : String(pos);
-      });
-    };
-    updateArchStack();
-    setInterval(() => {
-      archCurrent = (archCurrent + 1) % archItems.length;
-      updateArchStack();
-    }, 3200);
-  }
 
 });
