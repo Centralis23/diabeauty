@@ -496,9 +496,9 @@ section { padding: 110px 0; }
 
 .welcome-arch-panel {
   width: 100%;
-  background: linear-gradient(165deg, #f7ece6 0%, #f0d4c9 55%, #dfa3ad 100%);
-  border-radius: 50% 50% 0 0 / clamp(180px, 32vw, 420px) clamp(180px, 32vw, 420px) 0 0;
-  padding: clamp(210px, 38vw, 480px) 24px 80px;
+  background: linear-gradient(165deg, #fdfaf7 0%, #f6ece5 55%, #efdcd6 100%);
+  border-radius: 50% 50% 0 0 / clamp(90px, 15vw, 200px) clamp(90px, 15vw, 200px) 0 0;
+  padding: clamp(120px, 20vw, 260px) 24px 80px;
   text-align: center;
 }
 
@@ -509,8 +509,8 @@ section { padding: 110px 0; }
 
 .welcome-arch-badge {
   display: block;
-  width: clamp(190px, 24vw, 300px);
-  height: clamp(190px, 24vw, 300px);
+  width: clamp(220px, 30vw, 380px);
+  height: clamp(220px, 30vw, 380px);
   margin: 0 auto clamp(28px, 4vw, 40px);
   border-radius: 50%;
   overflow: hidden;
