@@ -450,7 +450,11 @@ section { padding: 110px 0; }
 }
 
 .intro-text .section-eyebrow { margin-bottom: 18px; }
-.intro-text .section-title { margin-bottom: 24px; }
+.intro-text .section-title {
+  font-family: 'Italiana', serif;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
 
 .intro-text p:not(.section-eyebrow) {
   color: var(--color-ink-soft);
