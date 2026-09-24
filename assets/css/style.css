@@ -605,9 +605,6 @@ section { padding: 110px 0; }
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: var(--color-ink);
-  opacity: 0.08;
-  pointer-events: none;
-  user-select: none;
 }
 
 .about-tagline {
@@ -617,7 +614,7 @@ section { padding: 110px 0; }
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.7;
-  color: var(--color-ink-soft);
+  color: var(--color-ink);
 }
 
 /* ===== Testimonials ===== */
