@@ -586,31 +586,30 @@ section { padding: 110px 0; }
 .about {
   position: relative;
   overflow: hidden;
-  padding: 120px 0 90px;
-  background: #e8e1d4;
+  padding: 110px 0;
+  background: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  gap: 22px;
 }
 
 .about-word {
-  position: absolute;
-  top: -25px;
-  left: 50%;
-  transform: translateX(-50%);
   margin: 0;
   white-space: nowrap;
   font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(3.5rem, 13vw, 9rem);
+  font-weight: 400;
+  font-size: clamp(3rem, 11vw, 8rem);
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: var(--color-white);
-  z-index: 0;
+  color: var(--color-ink);
+  opacity: 0.08;
 }
 
 .about-tagline {
-  position: relative;
-  z-index: 1;
-  margin: 0 auto;
+  margin: 0;
   max-width: 480px;
   padding: 0 24px;
   font-family: 'Cormorant Garamond', serif;
@@ -770,8 +769,8 @@ section { padding: 110px 0; }
   .services-tags-card { width: calc(100% - 40px); padding: 16px; margin-top: -40px; border-radius: 14px; }
   .services-tag { flex: 0 1 47%; height: 38px; padding: 0 8px; font-size: 0.72rem; }
 
-  .about { padding: 70px 0 56px; }
-  .about-word { font-size: 15vw; top: -10px; }
+  .about { padding: 64px 0; }
+  .about-word { font-size: 10.5vw; }
   .about-tagline { font-size: 0.92rem; }
 
   .contact-inner { grid-template-columns: 1fr; }
