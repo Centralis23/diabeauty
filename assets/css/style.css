@@ -586,30 +586,31 @@ section { padding: 110px 0; }
 .about {
   position: relative;
   overflow: hidden;
-  padding: 110px 0;
-  background: var(--color-bg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 120px 0 90px;
+  background: #e8e1d4;
   text-align: center;
-  gap: 22px;
 }
 
 .about-word {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
   margin: 0;
   white-space: nowrap;
   font-family: var(--font-display);
-  font-weight: 400;
-  font-size: clamp(3rem, 11vw, 8rem);
+  font-weight: 700;
+  font-size: clamp(3.5rem, 13vw, 9rem);
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: var(--color-ink);
-  opacity: 0.08;
+  color: var(--color-white);
+  z-index: 0;
 }
 
 .about-tagline {
-  margin: 0;
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
   max-width: 480px;
   padding: 0 24px;
   font-family: 'Cormorant Garamond', serif;
@@ -617,7 +618,6 @@ section { padding: 110px 0; }
   font-size: 1.2rem;
   line-height: 1.7;
   color: var(--color-ink);
-  opacity: 0.08;
 }
 
 /* ===== Testimonials ===== */
@@ -770,8 +770,8 @@ section { padding: 110px 0; }
   .services-tags-card { width: calc(100% - 40px); padding: 16px; margin-top: -40px; border-radius: 14px; }
   .services-tag { flex: 0 1 47%; height: 38px; padding: 0 8px; font-size: 0.72rem; }
 
-  .about { padding: 64px 0; }
-  .about-word { font-size: 10.5vw; }
+  .about { padding: 70px 0 56px; }
+  .about-word { font-size: 15vw; top: -10px; }
   .about-tagline { font-size: 0.92rem; }
 
   .contact-inner { grid-template-columns: 1fr; }
