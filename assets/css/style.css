@@ -598,9 +598,10 @@ section { padding: 110px 0; }
 
 .about-word {
   margin: 0;
+  white-space: nowrap;
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: clamp(3rem, 10vw, 8rem);
+  font-size: clamp(4rem, 18vw, 14rem);
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: var(--color-ink);
@@ -770,7 +771,7 @@ section { padding: 110px 0; }
   .services-tag { flex: 0 1 47%; height: 38px; padding: 0 8px; font-size: 0.72rem; }
 
   .about { padding: 64px 0; }
-  .about-word { font-size: 2.6rem; }
+  .about-word { font-size: 3.6rem; }
   .about-tagline { font-size: 0.92rem; }
 
   .contact-inner { grid-template-columns: 1fr; }
