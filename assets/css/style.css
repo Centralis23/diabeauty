@@ -600,10 +600,13 @@ section { padding: 110px 0; }
   margin: 0;
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: clamp(3rem, 9vw, 7rem);
-  letter-spacing: 0.03em;
+  font-size: clamp(3rem, 10vw, 8rem);
+  letter-spacing: 0.02em;
   text-transform: uppercase;
   color: var(--color-ink);
+  opacity: 0.08;
+  pointer-events: none;
+  user-select: none;
 }
 
 .about-tagline {
