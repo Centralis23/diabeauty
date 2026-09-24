@@ -617,6 +617,7 @@ section { padding: 110px 0; }
   font-size: 1.2rem;
   line-height: 1.7;
   color: var(--color-ink);
+  opacity: 0.08;
 }
 
 /* ===== Testimonials ===== */
