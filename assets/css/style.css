@@ -604,11 +604,9 @@ section { padding: 110px 0; }
   font-size: clamp(3rem, 11vw, 8rem);
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  background: linear-gradient(115deg, var(--color-ink) 0%, var(--color-rose-dark) 50%, var(--color-gold) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
   color: transparent;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1.5px var(--color-ink);
+  text-stroke: 1.5px var(--color-ink);
 }
 
 .about-tagline {
