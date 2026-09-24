@@ -586,25 +586,34 @@ section { padding: 110px 0; }
 .about {
   position: relative;
   overflow: hidden;
-  padding: 90px 0;
+  padding: 110px 0;
   background: var(--color-bg);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  gap: 22px;
 }
 
-.about-bg-text {
+.about-word {
   margin: 0;
-  white-space: nowrap;
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: clamp(3rem, 10vw, 8rem);
-  letter-spacing: 0.02em;
+  font-size: clamp(3rem, 9vw, 7rem);
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--color-ink);
-  opacity: 0.08;
-  pointer-events: none;
-  user-select: none;
+}
+
+.about-tagline {
+  margin: 0;
+  max-width: 480px;
+  padding: 0 24px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-ink-soft);
 }
 
 /* ===== Testimonials ===== */
@@ -757,8 +766,9 @@ section { padding: 110px 0; }
   .services-tags-card { width: calc(100% - 40px); padding: 16px; margin-top: -40px; border-radius: 14px; }
   .services-tag { flex: 0 1 47%; height: 38px; padding: 0 8px; font-size: 0.72rem; }
 
-  .about { padding: 60px 0; }
-  .about-bg-text { font-size: 2.6rem; }
+  .about { padding: 64px 0; }
+  .about-word { font-size: 2.6rem; }
+  .about-tagline { font-size: 0.92rem; }
 
   .contact-inner { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
