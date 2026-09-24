@@ -455,7 +455,7 @@ section { padding: 110px 0; }
   width: 100%;
   background-color: var(--color-bg-alt);
   background-image:
-    linear-gradient(rgba(247, 236, 230, 0.48), rgba(247, 236, 230, 0.48)),
+    linear-gradient(rgba(247, 236, 230, 0.62), rgba(247, 236, 230, 0.62)),
     url('../img/arch-braids.jpg');
   background-size: cover;
   background-repeat: no-repeat;
