@@ -599,8 +599,8 @@ section { padding: 110px 0; }
 .about-word {
   margin: 0;
   white-space: nowrap;
-  font-family: 'Italiana', serif;
-  font-weight: 400;
+  font-family: var(--font-display);
+  font-weight: 700;
   font-size: clamp(4rem, 18vw, 14rem);
   letter-spacing: 0.02em;
   text-transform: uppercase;
