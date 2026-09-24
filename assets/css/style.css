@@ -602,11 +602,10 @@ section { padding: 110px 0; }
   font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(3rem, 11vw, 8rem);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: rgba(169, 103, 113, 0.14);
-  -webkit-text-stroke: 2px var(--color-rose-dark);
-  text-stroke: 2px var(--color-rose-dark);
+  color: var(--color-ink);
+  opacity: 0.08;
 }
 
 .about-tagline {
