@@ -599,7 +599,7 @@ section { padding: 110px 0; }
 .about-word {
   margin: 0;
   white-space: nowrap;
-  font-family: var(--font-display);
+  font-family: 'Marcellus', serif;
   font-weight: 400;
   font-size: clamp(3rem, 11vw, 8rem);
   letter-spacing: 0.02em;
