@@ -601,10 +601,14 @@ section { padding: 110px 0; }
   white-space: nowrap;
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: clamp(4rem, 18vw, 14rem);
-  letter-spacing: 0.02em;
+  font-size: clamp(3rem, 11vw, 8rem);
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--color-ink);
+  background: linear-gradient(115deg, var(--color-ink) 0%, var(--color-rose-dark) 50%, var(--color-gold) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 .about-tagline {
