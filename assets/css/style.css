@@ -599,10 +599,10 @@ section { padding: 110px 0; }
 .about-word {
   margin: 0;
   white-space: nowrap;
-  font-family: 'Bebas Neue', sans-serif;
-  font-weight: 400;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
   font-size: clamp(3rem, 11vw, 8rem);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-ink);
   opacity: 0.08;
