@@ -586,15 +586,14 @@ section { padding: 110px 0; }
 .about {
   position: relative;
   overflow: hidden;
-  padding: 120px 0;
+  padding: 90px 0;
   background: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .about-bg-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   margin: 0;
   white-space: nowrap;
   font-family: var(--font-display);
@@ -603,47 +602,9 @@ section { padding: 110px 0; }
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: var(--color-ink);
-  opacity: 0.06;
+  opacity: 0.08;
   pointer-events: none;
   user-select: none;
-  z-index: 0;
-}
-
-.about-stats {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-}
-
-.about-stat {
-  flex: 0 1 220px;
-  padding: 0 40px;
-  text-align: center;
-  border-right: 1px solid rgba(43, 36, 34, 0.14);
-}
-
-.about-stat:last-child {
-  border-right: none;
-}
-
-.about-stat-number {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: clamp(2.2rem, 4vw, 3.2rem);
-  color: var(--color-rose-dark);
-  margin: 0 0 8px;
-  line-height: 1;
-}
-
-.about-stat-label {
-  font-family: var(--font-body);
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-ink-soft);
-  margin: 0;
 }
 
 /* ===== Testimonials ===== */
@@ -798,14 +759,6 @@ section { padding: 110px 0; }
 
   .about { padding: 60px 0; }
   .about-bg-text { font-size: 2.6rem; }
-  .about-stats { flex-direction: column; gap: 24px; }
-  .about-stat {
-    flex: none;
-    padding: 0 0 24px;
-    border-right: none;
-    border-bottom: 1px solid rgba(43, 36, 34, 0.14);
-  }
-  .about-stat:last-child { padding-bottom: 0; border-bottom: none; }
 
   .contact-inner { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
