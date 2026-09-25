@@ -585,8 +585,6 @@ section { padding: 110px 0; }
 /* ===== Pourquoi Diabeauty ===== */
 .why { background: var(--color-bg); text-align: center; }
 
-.why .section-eyebrow { color: var(--color-ink); }
-
 .why-title {
   text-transform: uppercase;
   letter-spacing: 0.02em;
@@ -595,7 +593,7 @@ section { padding: 110px 0; }
 .why-btn {
   padding: 20px 46px;
   font-size: 1rem;
-  color: var(--color-ink);
+  color: var(--color-rose);
   box-shadow:
     7px 7px 14px rgba(139, 108, 73, 0.2),
     -7px -7px 14px rgba(255, 255, 255, 0.9);
@@ -613,6 +611,7 @@ section { padding: 110px 0; }
   text-align: left;
   background: var(--color-white);
   border-radius: var(--radius-md);
+  border-top: 3px solid var(--color-rose);
   box-shadow: var(--shadow-soft);
   padding: 36px 30px 32px;
   transition: transform var(--transition), box-shadow var(--transition);
@@ -631,8 +630,11 @@ section { padding: 110px 0; }
   height: 56px;
   margin-bottom: 22px;
   border-radius: 50%;
-  background: rgba(169, 103, 113, 0.1);
-  color: var(--color-ink);
+  background: linear-gradient(160deg, #fdf0ee 0%, #f9e0dc 100%);
+  box-shadow:
+    4px 4px 8px rgba(139, 108, 73, 0.14),
+    -4px -4px 8px rgba(255, 255, 255, 0.9);
+  color: var(--color-rose);
 }
 
 .why-icon svg { width: 24px; height: 24px; }
