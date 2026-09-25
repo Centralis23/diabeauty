@@ -590,7 +590,6 @@ section { padding: 110px 0; }
 .why-title {
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  opacity: 0.72;
 }
 
 .why-btn {
@@ -615,7 +614,6 @@ section { padding: 110px 0; }
 .why-grid { perspective: 1400px; }
 
 .why-card {
-  --why-tilt: 0deg;
   position: relative;
   text-align: left;
   background: var(--color-white);
@@ -623,35 +621,35 @@ section { padding: 110px 0; }
   border-top: 3px solid #e6bcc2;
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.8) inset,
-    14px 14px 0 rgba(201, 138, 148, 0.5),
-    0 18px 26px rgba(43, 36, 34, 0.1),
-    0 34px 48px rgba(43, 36, 34, 0.08);
+    7px 7px 0 rgba(230, 188, 194, 0.55),
+    0 14px 20px rgba(43, 36, 34, 0.08),
+    0 28px 40px rgba(43, 36, 34, 0.06);
   padding: 36px 30px 32px;
   opacity: 0;
-  transform: translateY(40px) rotateY(var(--why-tilt));
+  transform: translateY(40px);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
-
-.why-card:nth-child(1) { --why-tilt: -9deg; animation-delay: 0s; }
-.why-card:nth-child(2) { --why-tilt: 0deg; animation-delay: 0.15s; }
-.why-card:nth-child(3) { --why-tilt: 9deg; animation-delay: 0.3s; }
 
 .why-card.why-reveal {
   animation: whyCardIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
+.why-card:nth-child(1) { animation-delay: 0s; }
+.why-card:nth-child(2) { animation-delay: 0.15s; }
+.why-card:nth-child(3) { animation-delay: 0.3s; }
+
 .why-card:hover {
-  transform: translateY(-10px) rotateY(calc(var(--why-tilt) * 1.5)) rotateX(4deg);
+  transform: translateY(-8px) rotateX(4deg) rotateY(-4deg);
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.8) inset,
-    20px 20px 0 rgba(201, 138, 148, 0.55),
-    0 28px 38px rgba(43, 36, 34, 0.16),
-    0 50px 68px rgba(43, 36, 34, 0.14);
+    11px 11px 0 rgba(230, 188, 194, 0.6),
+    0 24px 34px rgba(43, 36, 34, 0.14),
+    0 44px 60px rgba(43, 36, 34, 0.12);
 }
 
 @keyframes whyCardIn {
-  from { opacity: 0; transform: translateY(40px) rotateY(var(--why-tilt)); }
-  to { opacity: 1; transform: translateY(0) rotateY(var(--why-tilt)) rotateX(3deg); }
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .why-icon {
