@@ -611,8 +611,6 @@ section { padding: 110px 0; }
   margin-bottom: 48px;
 }
 
-.why-grid { perspective: 1400px; }
-
 .why-card {
   position: relative;
   text-align: left;
@@ -639,7 +637,7 @@ section { padding: 110px 0; }
 .why-card:nth-child(3) { animation-delay: 0.3s; }
 
 .why-card:hover {
-  transform: translateY(-8px) rotateX(4deg) rotateY(-4deg);
+  transform: translateY(-8px);
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.8) inset,
     11px 11px 0 rgba(230, 188, 194, 0.6),
