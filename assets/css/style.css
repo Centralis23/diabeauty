@@ -585,6 +585,13 @@ section { padding: 110px 0; }
 /* ===== Pourquoi Diabeauty ===== */
 .why { background: var(--color-bg); text-align: center; }
 
+.why-title {
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-transform: none;
+}
+
 .why-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
