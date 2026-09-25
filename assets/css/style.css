@@ -604,7 +604,7 @@ section { padding: 110px 0; }
   font-size: clamp(3.5rem, 13vw, 10rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #555555;
+  color: #9a9a9a;
 }
 
 .about-tagline {
@@ -616,6 +616,10 @@ section { padding: 110px 0; }
   font-size: 1.2rem;
   line-height: 1.7;
   color: var(--color-ink);
+}
+
+.about-btn {
+  margin-top: 10px;
 }
 
 /* ===== Testimonials ===== */
