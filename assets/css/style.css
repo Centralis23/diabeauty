@@ -652,6 +652,22 @@ section { padding: 110px 0; }
   color: var(--color-ink);
 }
 
+.why-dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.why-dots span {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--color-rose-dark);
+  display: inline-block;
+}
+
 .why-card p {
   margin: 0;
   font-family: var(--font-body);
