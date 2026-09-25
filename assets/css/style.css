@@ -586,38 +586,8 @@ section { padding: 110px 0; }
 .about {
   position: relative;
   overflow: hidden;
-  padding: 130px 0 90px;
+  padding: 100px 0 90px;
   background: var(--color-bg);
-}
-
-.about-marquee {
-  position: absolute;
-  top: 195px;
-  left: 0;
-  width: 100%;
-  transform: translateY(-50%);
-  overflow: hidden;
-  pointer-events: none;
-  user-select: none;
-  z-index: 0;
-}
-
-.about-marquee-track {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  width: max-content;
-  animation: marquee-scroll 26s linear infinite;
-  white-space: nowrap;
-}
-
-.about-marquee-track span {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 300;
-  font-size: clamp(3.5rem, 13vw, 10rem);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #9a9a9a;
 }
 
 .about-content {
@@ -627,12 +597,30 @@ section { padding: 110px 0; }
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 18px;
+  gap: 26px;
+}
+
+.about-title {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: clamp(3.5rem, 10vw, 6.5rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-rose);
+  text-shadow:
+    1px 1px 0 var(--color-rose-dark),
+    2px 2px 0 var(--color-rose-dark),
+    3px 3px 0 var(--color-rose-dark),
+    4px 4px 0 var(--color-rose-dark),
+    5px 5px 0 var(--color-rose-dark),
+    6px 6px 0 var(--color-rose-dark),
+    8px 8px 14px rgba(43, 36, 34, 0.3);
 }
 
 .about-photo {
-  width: 110px;
-  height: 110px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   overflow: hidden;
   box-shadow: var(--shadow-soft);
@@ -815,11 +803,15 @@ section { padding: 110px 0; }
   .services-tags-card { width: calc(100% - 40px); padding: 16px; margin-top: -40px; border-radius: 14px; }
   .services-tag { flex: 0 1 47%; height: 38px; padding: 0 8px; font-size: 0.72rem; }
 
-  .about { padding: 90px 0 56px; }
-  .about-marquee { top: 148px; }
-  .about-marquee-track span { font-size: 13vw; }
-  .about-marquee-track { gap: 24px; }
-  .about-photo { width: 88px; height: 88px; }
+  .about { padding: 56px 0; }
+  .about-title {
+    text-shadow:
+      1px 1px 0 var(--color-rose-dark),
+      2px 2px 0 var(--color-rose-dark),
+      3px 3px 0 var(--color-rose-dark),
+      4px 4px 8px rgba(43, 36, 34, 0.3);
+  }
+  .about-photo { width: 130px; height: 130px; }
   .about-tagline { font-size: 0.92rem; }
 
   .contact-inner { grid-template-columns: 1fr; }
