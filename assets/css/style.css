@@ -585,6 +585,19 @@ section { padding: 110px 0; }
 /* ===== Pourquoi Diabeauty ===== */
 .why { background: var(--color-bg); text-align: center; }
 
+.why-title {
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.why-btn {
+  padding: 20px 46px;
+  font-size: 1rem;
+  box-shadow:
+    7px 7px 14px rgba(139, 108, 73, 0.2),
+    -7px -7px 14px rgba(255, 255, 255, 0.9);
+}
+
 .why-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -608,19 +621,13 @@ section { padding: 110px 0; }
   box-shadow: 0 28px 50px rgba(43, 36, 34, 0.14);
 }
 
-.why-card-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 22px;
-}
-
 .why-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 56px;
   height: 56px;
+  margin-bottom: 22px;
   border-radius: 50%;
   background: linear-gradient(160deg, #f9f0e9 0%, #f2e3d8 100%);
   box-shadow:
@@ -630,13 +637,6 @@ section { padding: 110px 0; }
 }
 
 .why-icon svg { width: 24px; height: 24px; }
-
-.why-number {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1.4rem;
-  color: var(--color-gold);
-}
 
 .why-card h3 {
   margin: 0 0 12px;
