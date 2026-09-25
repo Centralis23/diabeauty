@@ -586,7 +586,7 @@ section { padding: 110px 0; }
 .why {
   position: relative;
   overflow: hidden;
-  background: var(--color-bg);
+  background: var(--color-white);
   text-align: center;
 }
 
