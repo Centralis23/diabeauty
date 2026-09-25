@@ -599,6 +599,8 @@ section { padding: 110px 0; }
   overflow: hidden;
   pointer-events: none;
   user-select: none;
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
 }
 
 .why-bg-track {
