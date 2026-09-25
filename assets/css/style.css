@@ -621,6 +621,7 @@ section { padding: 110px 0; }
   border-top: 3px solid #e6bcc2;
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.8) inset,
+    7px 7px 0 rgba(230, 188, 194, 0.55),
     0 14px 20px rgba(43, 36, 34, 0.08),
     0 28px 40px rgba(43, 36, 34, 0.06);
   padding: 36px 30px 32px;
@@ -641,6 +642,7 @@ section { padding: 110px 0; }
   transform: translateY(-8px) rotateX(4deg) rotateY(-4deg);
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.8) inset,
+    11px 11px 0 rgba(230, 188, 194, 0.6),
     0 24px 34px rgba(43, 36, 34, 0.14),
     0 44px 60px rgba(43, 36, 34, 0.12);
 }
@@ -687,18 +689,13 @@ section { padding: 110px 0; }
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: var(--color-rose-dark);
+  background: var(--color-ink);
   display: inline-block;
 }
 
 .why-title .why-dots {
-  gap: 7px;
-  margin-left: 14px;
-}
-
-.why-title .why-dots span {
-  width: 8px;
-  height: 8px;
+  gap: 5px;
+  margin-left: 12px;
 }
 
 .why-card p {
@@ -859,6 +856,7 @@ section { padding: 110px 0; }
   .services-tags-card { width: calc(100% - 40px); padding: 16px; margin-top: -40px; border-radius: 14px; }
   .services-tag { flex: 0 1 47%; height: 38px; padding: 0 8px; font-size: 0.72rem; }
 
+  .why-title { font-size: clamp(1.3rem, 6vw, 1.7rem); white-space: nowrap; }
   .why-grid { grid-template-columns: 1fr; gap: 20px; }
 
   .contact-inner { grid-template-columns: 1fr; }
