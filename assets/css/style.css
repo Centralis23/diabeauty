@@ -618,7 +618,7 @@ section { padding: 110px 0; }
   text-align: left;
   background: var(--color-white);
   border-radius: var(--radius-md);
-  border-top: 3px solid var(--color-rose);
+  border-top: 3px solid #e6bcc2;
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.8) inset,
     0 14px 20px rgba(43, 36, 34, 0.08),
