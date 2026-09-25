@@ -611,20 +611,43 @@ section { padding: 110px 0; }
   margin-bottom: 48px;
 }
 
+.why-grid { perspective: 1400px; }
+
 .why-card {
   position: relative;
   text-align: left;
   background: var(--color-white);
   border-radius: var(--radius-md);
   border-top: 3px solid var(--color-rose);
-  box-shadow: var(--shadow-soft);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.8) inset,
+    0 14px 20px rgba(43, 36, 34, 0.08),
+    0 28px 40px rgba(43, 36, 34, 0.06);
   padding: 36px 30px 32px;
-  transition: transform var(--transition), box-shadow var(--transition);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
+.why-card.why-reveal {
+  animation: whyCardIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.why-card:nth-child(1) { animation-delay: 0s; }
+.why-card:nth-child(2) { animation-delay: 0.15s; }
+.why-card:nth-child(3) { animation-delay: 0.3s; }
+
 .why-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 28px 50px rgba(43, 36, 34, 0.14);
+  transform: translateY(-8px) rotateX(4deg) rotateY(-4deg);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.8) inset,
+    0 24px 34px rgba(43, 36, 34, 0.14),
+    0 44px 60px rgba(43, 36, 34, 0.12);
+}
+
+@keyframes whyCardIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .why-icon {
@@ -666,6 +689,16 @@ section { padding: 110px 0; }
   border-radius: 50%;
   background: var(--color-rose-dark);
   display: inline-block;
+}
+
+.why-title .why-dots {
+  gap: 7px;
+  margin-left: 14px;
+}
+
+.why-title .why-dots span {
+  width: 8px;
+  height: 8px;
 }
 
 .why-card p {

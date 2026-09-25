@@ -50,4 +50,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  const whyCards = document.querySelectorAll('.why-card');
+  if (whyCards.length && 'IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('why-reveal');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    whyCards.forEach((card) => revealObserver.observe(card));
+  } else {
+    whyCards.forEach((card) => card.classList.add('why-reveal'));
+  }
+
 });
