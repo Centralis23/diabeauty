@@ -590,29 +590,50 @@ section { padding: 110px 0; }
   text-align: center;
 }
 
-.why-bg-text {
-  position: absolute;
-  top: 54px;
-  left: 50%;
-  transform: translateX(-50%);
+.why-bg-marquee {
+  position: relative;
   z-index: 0;
-  margin: 0;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-bottom: 18px;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+}
+
+.why-bg-track {
+  display: flex;
+  width: max-content;
+  gap: 64px;
+  animation: marquee-scroll 30s linear infinite;
   white-space: nowrap;
+}
+
+.why-bg-track span {
   font-family: var(--font-display);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  font-size: clamp(4.5rem, 11vw, 8.5rem);
+  font-size: clamp(3.5rem, 9vw, 7rem);
   line-height: 1;
   color: var(--color-rose);
   opacity: 0.16;
-  pointer-events: none;
-  user-select: none;
 }
 
 .why .container { position: relative; z-index: 1; }
 
 .why .section-eyebrow { color: var(--color-ink); }
+
+.why-heading {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.why-heading.why-reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 .why-title {
   text-transform: uppercase;

@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const whyCards = document.querySelectorAll('.why-card');
+  const whyCards = document.querySelectorAll('.why-card, .why-heading');
   if (whyCards.length && 'IntersectionObserver' in window) {
     const revealObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
