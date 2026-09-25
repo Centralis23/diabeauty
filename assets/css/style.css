@@ -854,7 +854,8 @@ section { padding: 110px 0; }
   .services-tags-card { width: calc(100% - 40px); padding: 16px; margin-top: -40px; border-radius: 14px; }
   .services-tag { flex: 0 1 47%; height: 38px; padding: 0 8px; font-size: 0.72rem; }
 
-  .why-title { font-size: clamp(1.3rem, 6vw, 1.7rem); white-space: nowrap; }
+  .why-title { font-size: clamp(1.5rem, 7.2vw, 1.85rem); white-space: nowrap; }
+  .why-title .why-dots { display: none; }
   .why-grid { grid-template-columns: 1fr; gap: 20px; }
 
   .contact-inner { grid-template-columns: 1fr; }
