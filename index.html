@@ -137,55 +137,55 @@
     <div class="container">
       <p class="section-eyebrow">Galerie</p>
       <h2 class="section-title">Un aperçu de notre univers</h2>
-    </div>
+      <div class="gallery-nav" role="tablist">
+        <button class="gallery-nav-tab active" data-filter="all" type="button">Toutes</button>
+        <button class="gallery-nav-tab" data-filter="tresses" type="button">Tresses</button>
+        <button class="gallery-nav-tab" data-filter="manucure" type="button">Manucure</button>
+        <button class="gallery-nav-tab" data-filter="salon" type="button">Salon</button>
+        <button class="gallery-nav-tab" data-filter="clientes" type="button">Clientes</button>
+      </div>
 
-    <div class="fan-stack" id="fan-stack">
-      <div class="fan-card" style="--i:0; --tilt:8deg;" data-lightbox="video" data-video-src="assets/video/gallery-braids.mp4">
-        <img src="assets/img/gallery-braids-poster.jpg" alt="Tresses en mouvement" loading="lazy" />
-        <span class="fan-card-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-        <div class="fan-card-overlay"></div>
-        <p class="fan-card-label">Tresses en mouvement</p>
-      </div>
-      <div class="fan-card" style="--i:1; --tilt:-11deg;" data-lightbox="image">
-        <img src="assets/img/salon-interieur.jpg" alt="Intérieur du salon Diabeauty" loading="lazy" />
-        <div class="fan-card-overlay"></div>
-        <p class="fan-card-label">Notre salon</p>
-      </div>
-      <div class="fan-card" style="--i:2; --tilt:14deg;" data-lightbox="image">
-        <img src="assets/img/braids-gold-cuffs.jpg" alt="Tresses collées avec manchettes dorées" loading="lazy" />
-        <div class="fan-card-overlay"></div>
-        <p class="fan-card-label">Tresses &amp; bijoux</p>
-      </div>
-      <div class="fan-card" style="--i:3; --tilt:-9deg;" data-lightbox="image">
-        <img src="assets/img/client-teddy-bear.jpg" alt="Cliente Diabeauty tresses collées" loading="lazy" />
-        <div class="fan-card-overlay"></div>
-        <p class="fan-card-label">Nos clientes</p>
-      </div>
-      <div class="fan-card" style="--i:4; --tilt:12deg;" data-lightbox="video" data-video-src="assets/video/gallery-client.mp4">
-        <img src="assets/img/gallery-client-poster.jpg" alt="Sourire Diabeauty" loading="lazy" />
-        <span class="fan-card-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-        <div class="fan-card-overlay"></div>
-        <p class="fan-card-label">Sourire Diabeauty</p>
-      </div>
-      <div class="fan-card" style="--i:5; --tilt:-13deg;" data-lightbox="image">
-        <img src="assets/img/arch-braids.jpg" alt="Tresses artistiques" loading="lazy" />
-        <div class="fan-card-overlay"></div>
-        <p class="fan-card-label">Tresses artistiques</p>
-      </div>
-      <div class="fan-card" style="--i:6; --tilt:10deg;" data-lightbox="image">
-        <img src="assets/img/nails-chrome-gold.jpg" alt="Manucure chromée et dorée" loading="lazy" />
-        <div class="fan-card-overlay"></div>
-        <p class="fan-card-label">Manucure chromée</p>
-      </div>
-      <div class="fan-card" style="--i:7; --tilt:-8deg;" data-lightbox="image">
-        <img src="assets/img/braids-2.jpg" alt="Coiffure tressée sur-mesure" loading="lazy" />
-        <div class="fan-card-overlay"></div>
-        <p class="fan-card-label">Coiffure sur-mesure</p>
-      </div>
-      <div class="fan-card" style="--i:8; --tilt:15deg;" data-lightbox="image">
-        <img src="assets/img/nails-french-jewel.jpg" alt="Manucure french ornée de bijoux" loading="lazy" />
-        <div class="fan-card-overlay"></div>
-        <p class="fan-card-label">Manucure french</p>
+      <div class="gallery-showcase">
+        <div class="spotlight" id="spotlight">
+          <img class="spotlight-img" id="spotlight-img" src="assets/img/gallery-braids-poster.jpg" alt="Tresses en mouvement" />
+          <span class="spotlight-play" id="spotlight-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <div class="spotlight-caption">
+            <span class="spotlight-rule" aria-hidden="true"></span>
+            <p class="spotlight-title" id="spotlight-title">Tresses en mouvement</p>
+          </div>
+        </div>
+
+        <div class="thumb-grid">
+          <button class="thumb active" type="button" data-category="tresses" data-lightbox="video" data-video-src="assets/video/gallery-braids.mp4" data-title="Tresses en mouvement" data-img="assets/img/gallery-braids-poster.jpg">
+            <img src="assets/img/gallery-braids-poster.jpg" alt="Tresses en mouvement" loading="lazy" />
+            <span class="thumb-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          </button>
+          <button class="thumb" type="button" data-category="salon" data-lightbox="image" data-title="Notre salon" data-img="assets/img/salon-interieur.jpg">
+            <img src="assets/img/salon-interieur.jpg" alt="Intérieur du salon Diabeauty" loading="lazy" />
+          </button>
+          <button class="thumb" type="button" data-category="tresses" data-lightbox="image" data-title="Tresses &amp; bijoux" data-img="assets/img/braids-gold-cuffs.jpg">
+            <img src="assets/img/braids-gold-cuffs.jpg" alt="Tresses collées avec manchettes dorées" loading="lazy" />
+          </button>
+          <button class="thumb" type="button" data-category="clientes" data-lightbox="image" data-title="Nos clientes" data-img="assets/img/client-teddy-bear.jpg">
+            <img src="assets/img/client-teddy-bear.jpg" alt="Cliente Diabeauty tresses collées" loading="lazy" />
+          </button>
+          <button class="thumb" type="button" data-category="clientes" data-lightbox="video" data-video-src="assets/video/gallery-client.mp4" data-title="Sourire Diabeauty" data-img="assets/img/gallery-client-poster.jpg">
+            <img src="assets/img/gallery-client-poster.jpg" alt="Sourire Diabeauty" loading="lazy" />
+            <span class="thumb-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          </button>
+          <button class="thumb" type="button" data-category="tresses" data-lightbox="image" data-title="Tresses artistiques" data-img="assets/img/arch-braids.jpg">
+            <img src="assets/img/arch-braids.jpg" alt="Tresses artistiques" loading="lazy" />
+          </button>
+          <button class="thumb" type="button" data-category="manucure" data-lightbox="image" data-title="Manucure chromée" data-img="assets/img/nails-chrome-gold.jpg">
+            <img src="assets/img/nails-chrome-gold.jpg" alt="Manucure chromée et dorée" loading="lazy" />
+          </button>
+          <button class="thumb" type="button" data-category="tresses" data-lightbox="image" data-title="Coiffure sur-mesure" data-img="assets/img/braids-2.jpg">
+            <img src="assets/img/braids-2.jpg" alt="Coiffure tressée sur-mesure" loading="lazy" />
+          </button>
+          <button class="thumb" type="button" data-category="manucure" data-lightbox="image" data-title="Manucure french" data-img="assets/img/nails-french-jewel.jpg">
+            <img src="assets/img/nails-french-jewel.jpg" alt="Manucure french ornée de bijoux" loading="lazy" />
+          </button>
+        </div>
       </div>
     </div>
   </section>
