@@ -321,6 +321,9 @@ section { padding: 110px 0; }
 
 .services .container { position: relative; z-index: 1; }
 
+.services .section-eyebrow { color: var(--color-ink); }
+.services .section-title { text-transform: uppercase; }
+
 .services-grid {
   display: flex;
   overflow-x: auto;
