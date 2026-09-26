@@ -826,66 +826,95 @@ section { padding: 110px 0; }
 
 .pricing .container { position: relative; z-index: 1; }
 
-.pricing-nav {
+.pricing-accordion {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 34px;
-  margin-bottom: 48px;
-  border-bottom: 1px solid rgba(43, 36, 34, 0.1);
+  flex-direction: column;
+  gap: 12px;
 }
 
-.pricing-tab {
-  position: relative;
-  padding: 0 0 16px;
+.pricing-accordion-item {
+  border-radius: 18px;
+  background: var(--color-bg);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+.pricing-accordion-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 28px 32px;
   background: none;
   border: none;
-  font-family: var(--font-body);
-  font-size: 0.8rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--color-ink-soft);
   cursor: pointer;
-  transition: color var(--transition);
+  text-align: left;
+  font-family: inherit;
 }
 
-.pricing-tab::after {
+.pricing-accordion-number {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--color-gold);
+  min-width: 28px;
+}
+
+.pricing-accordion-title {
+  flex: 1;
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.6vw, 1.8rem);
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.pricing-accordion-plus {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  flex: none;
+}
+.pricing-accordion-plus::before,
+.pricing-accordion-plus::after {
   content: '';
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -1px;
-  height: 2px;
-  background: var(--color-gold);
-  transform: scaleX(0);
-  transition: transform 0.35s ease;
+  top: 50%;
+  left: 50%;
+  background: var(--color-rose-dark);
+  transition: transform var(--transition);
+}
+.pricing-accordion-plus::before { width: 20px; height: 2px; transform: translate(-50%, -50%); }
+.pricing-accordion-plus::after { width: 2px; height: 20px; transform: translate(-50%, -50%); }
+.pricing-accordion-header[aria-expanded="true"] .pricing-accordion-plus::after { transform: translate(-50%, -50%) rotate(90deg); opacity: 0; }
+
+.pricing-accordion-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s ease;
 }
 
-.pricing-tab:hover { color: var(--color-ink); }
-.pricing-tab.active { color: var(--color-ink); }
-.pricing-tab.active::after { transform: scaleX(1); }
-
-.pricing-panel { display: none; }
-.pricing-panel.active {
-  display: block;
-  animation: pricingPanelIn 0.5s ease;
+.pricing-accordion-header[aria-expanded="true"] + .pricing-accordion-panel {
+  grid-template-rows: 1fr;
 }
 
-@keyframes pricingPanelIn {
-  from { opacity: 0; transform: translateY(14px); }
-  to { opacity: 1; transform: translateY(0); }
+.pricing-accordion-panel-inner {
+  min-height: 0;
+  overflow: hidden;
+  padding: 0 32px;
+}
+.pricing-accordion-header[aria-expanded="true"] + .pricing-accordion-panel .pricing-accordion-panel-inner {
+  padding: 0 32px 36px;
 }
 
 .pricing-forfaits {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-  margin-bottom: 56px;
+  margin-bottom: 40px;
 }
 
 .pricing-forfait {
   text-align: center;
-  background: var(--color-bg);
+  background: var(--color-white);
   border-radius: var(--radius-md);
   padding: 30px 20px;
   box-shadow: var(--shadow-soft);
@@ -1161,9 +1190,10 @@ section { padding: 110px 0; }
   .service-card-media img,
   .service-card-media video { -webkit-user-drag: none; user-select: none; pointer-events: none; }
 
-  .pricing-nav { gap: 18px; margin-bottom: 28px; }
-  .pricing-tab { font-size: 0.7rem; letter-spacing: 0.08em; padding-bottom: 12px; }
-  .pricing-forfaits { grid-template-columns: 1fr; gap: 16px; margin-bottom: 40px; }
+  .pricing-accordion-header { padding: 22px 20px; gap: 14px; }
+  .pricing-accordion-panel-inner { padding: 0 20px; }
+  .pricing-accordion-header[aria-expanded="true"] + .pricing-accordion-panel .pricing-accordion-panel-inner { padding: 0 20px 28px; }
+  .pricing-forfaits { grid-template-columns: 1fr; gap: 16px; margin-bottom: 32px; }
   .pricing-list-grid { grid-template-columns: 1fr; gap: 32px; }
   .pricing-list li { font-size: 0.86rem; }
 

@@ -104,19 +104,14 @@ document.addEventListener('DOMContentLoaded', () => {
     welcomeReveals.forEach((el) => el.classList.add('welcome-reveal'));
   }
 
-  const pricingTabs = document.querySelectorAll('.pricing-tab');
-  const pricingPanels = document.querySelectorAll('.pricing-panel');
-  if (pricingTabs.length && pricingPanels.length) {
-    pricingTabs.forEach((tab) => {
-      tab.addEventListener('click', () => {
-        pricingTabs.forEach((t) => t.classList.remove('active'));
-        tab.classList.add('active');
-        pricingPanels.forEach((panel) => {
-          panel.classList.toggle('active', panel.dataset.panel === tab.dataset.tab);
-        });
-      });
+  const pricingHeaders = document.querySelectorAll('.pricing-accordion-header');
+  pricingHeaders.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      pricingHeaders.forEach((other) => other.setAttribute('aria-expanded', 'false'));
+      btn.setAttribute('aria-expanded', String(!isOpen));
     });
-  }
+  });
 
   const whyCards = document.querySelectorAll('.why-card, .why-heading');
   if (whyCards.length && 'IntersectionObserver' in window) {
