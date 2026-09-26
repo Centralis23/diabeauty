@@ -137,40 +137,51 @@
     <div class="container">
       <p class="section-eyebrow">Galerie</p>
       <h2 class="section-title">Un aperçu de notre univers</h2>
-      <div class="gallery-accordion">
-        <div class="acc-panel">
-          <video class="acc-panel-video" src="assets/video/gallery-braids.mp4" poster="assets/img/gallery-braids-poster.jpg" muted loop playsinline preload="metadata"></video>
-          <div class="acc-panel-overlay"></div>
-          <p class="acc-panel-label">Tresses en mouvement</p>
+      <div class="gallery-tabs" role="tablist">
+        <button class="gallery-tab active" data-filter="all" type="button">Toutes</button>
+        <button class="gallery-tab" data-filter="tresses" type="button">Tresses</button>
+        <button class="gallery-tab" data-filter="manucure" type="button">Manucure</button>
+        <button class="gallery-tab" data-filter="salon" type="button">Salon</button>
+        <button class="gallery-tab" data-filter="clientes" type="button">Clientes</button>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item" data-category="tresses" data-lightbox="video" data-video-src="assets/video/gallery-braids.mp4">
+          <img src="assets/img/gallery-braids-poster.jpg" alt="Tresses en mouvement" loading="lazy" />
+          <span class="gallery-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
         </div>
-        <div class="acc-panel">
+        <div class="gallery-item" data-category="salon" data-lightbox="image">
           <img src="assets/img/salon-interieur.jpg" alt="Intérieur du salon Diabeauty" loading="lazy" />
-          <div class="acc-panel-overlay"></div>
-          <p class="acc-panel-label">Notre salon</p>
         </div>
-        <div class="acc-panel">
+        <div class="gallery-item" data-category="tresses" data-lightbox="image">
           <img src="assets/img/braids-gold-cuffs.jpg" alt="Tresses collées avec manchettes dorées" loading="lazy" />
-          <div class="acc-panel-overlay"></div>
-          <p class="acc-panel-label">Tresses &amp; bijoux</p>
         </div>
-        <div class="acc-panel">
+        <div class="gallery-item" data-category="clientes" data-lightbox="image">
           <img src="assets/img/client-teddy-bear.jpg" alt="Cliente Diabeauty tresses collées" loading="lazy" />
-          <div class="acc-panel-overlay"></div>
-          <p class="acc-panel-label">Nos clientes</p>
         </div>
-        <div class="acc-panel">
-          <video class="acc-panel-video" src="assets/video/gallery-client.mp4" poster="assets/img/gallery-client-poster.jpg" muted loop playsinline preload="metadata"></video>
-          <div class="acc-panel-overlay"></div>
-          <p class="acc-panel-label">Sourire Diabeauty</p>
+        <div class="gallery-item" data-category="clientes" data-lightbox="video" data-video-src="assets/video/gallery-client.mp4">
+          <img src="assets/img/gallery-client-poster.jpg" alt="Sourire Diabeauty" loading="lazy" />
+          <span class="gallery-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
         </div>
-        <div class="acc-panel">
+        <div class="gallery-item" data-category="tresses" data-lightbox="image">
           <img src="assets/img/arch-braids.jpg" alt="Tresses artistiques" loading="lazy" />
-          <div class="acc-panel-overlay"></div>
-          <p class="acc-panel-label">Tresses artistiques</p>
+        </div>
+        <div class="gallery-item" data-category="manucure" data-lightbox="image">
+          <img src="assets/img/nails-chrome-gold.jpg" alt="Manucure chromée et dorée" loading="lazy" />
+        </div>
+        <div class="gallery-item" data-category="tresses" data-lightbox="image">
+          <img src="assets/img/braids-2.jpg" alt="Coiffure tressée sur-mesure" loading="lazy" />
+        </div>
+        <div class="gallery-item" data-category="manucure" data-lightbox="image">
+          <img src="assets/img/nails-french-jewel.jpg" alt="Manucure french ornée de bijoux" loading="lazy" />
         </div>
       </div>
     </div>
   </section>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Fermer">&times;</button>
+    <div class="lightbox-content" id="lightbox-content"></div>
+  </div>
 
   <!-- Coiffure : vidéo en fond -->
   <section class="coif-feature">
