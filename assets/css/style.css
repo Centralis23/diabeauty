@@ -415,34 +415,57 @@ section { padding: 110px 0; }
   to { transform: translateX(-50%); }
 }
 
-/* ===== Full-width video ===== */
-.video-full {
+/* ===== Coiffure : vidéo en fond ===== */
+.coif-feature {
   position: relative;
   padding: 0;
-  display: none;
-}
-
-.video-full-media {
-  position: relative;
-  height: 38vh;
-  min-height: 260px;
-  max-height: 400px;
+  height: 620px;
+  display: flex;
+  align-items: center;
   overflow: hidden;
 }
 
-.video-full video {
+.coif-feature-media {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 40%;
+  object-position: center 42%;
 }
 
-.video-full-scrim {
+.coif-feature-scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(30, 20, 18, 0.6) 0%, rgba(30, 20, 18, 0.2) 35%, rgba(30, 20, 18, 0.4) 100%);
+  background: linear-gradient(90deg, rgba(20, 14, 13, 0.78) 0%, rgba(20, 14, 13, 0.45) 55%, rgba(20, 14, 13, 0.2) 100%);
+}
+
+.coif-feature-content {
+  position: relative;
+  z-index: 1;
+  max-width: 480px;
+}
+
+.coif-feature .section-eyebrow {
+  color: var(--color-white);
+  text-align: left;
+  opacity: 0.85;
+}
+
+.coif-feature-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2rem, 3.6vw, 2.8rem);
+  color: var(--color-white);
+  margin: 0 0 18px;
+}
+
+.coif-feature-text {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0 0 30px;
 }
 
 /* ===== Welcome arch ===== */
@@ -981,6 +1004,14 @@ section { padding: 110px 0; }
   .acc-panel { flex-basis: 30px; }
   .acc-panel.active { flex: 8 1 160px; }
   .acc-panel-label { font-size: 1.05rem; left: 16px; bottom: 16px; right: 16px; }
+
+  .coif-feature { height: 520px; }
+  .coif-feature-scrim { background: linear-gradient(180deg, rgba(20, 14, 13, 0.3) 0%, rgba(20, 14, 13, 0.75) 65%, rgba(20, 14, 13, 0.85) 100%); }
+  .coif-feature-content { max-width: 100%; }
+  .coif-feature .section-eyebrow { text-align: center; }
+  .coif-feature-title { text-align: center; font-size: clamp(1.7rem, 7vw, 2.2rem); }
+  .coif-feature-text { text-align: center; }
+  .coif-feature .btn-emboss { display: block; width: fit-content; margin: 0 auto; }
 
   .contact-inner { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
