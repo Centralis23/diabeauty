@@ -41,15 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const accordionHeaders = document.querySelectorAll('.accordion-header');
-  accordionHeaders.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const isOpen = btn.getAttribute('aria-expanded') === 'true';
-      accordionHeaders.forEach((other) => other.setAttribute('aria-expanded', 'false'));
-      btn.setAttribute('aria-expanded', String(!isOpen));
-    });
-  });
-
   const whyCards = document.querySelectorAll('.why-card, .why-heading');
   if (whyCards.length && 'IntersectionObserver' in window) {
     const revealObserver = new IntersectionObserver((entries, observer) => {
