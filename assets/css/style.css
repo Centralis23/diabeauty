@@ -700,7 +700,7 @@ section { padding: 110px 0; }
   border-top: 3px solid #e6bcc2;
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.8) inset,
-    7px 7px 0 rgba(230, 188, 194, 0.55),
+    7px 7px 0 rgba(210, 210, 210, 0.55),
     0 14px 20px rgba(43, 36, 34, 0.08),
     0 28px 40px rgba(43, 36, 34, 0.06);
   padding: 36px 30px 32px;
@@ -721,7 +721,7 @@ section { padding: 110px 0; }
   transform: translateY(-8px);
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.8) inset,
-    11px 11px 0 rgba(230, 188, 194, 0.6),
+    11px 11px 0 rgba(210, 210, 210, 0.6),
     0 24px 34px rgba(43, 36, 34, 0.14),
     0 44px 60px rgba(43, 36, 34, 0.12);
 }
