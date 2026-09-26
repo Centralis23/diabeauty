@@ -65,19 +65,53 @@ document.addEventListener('DOMContentLoaded', () => {
     whyCards.forEach((card) => card.classList.add('why-reveal'));
   }
 
-  const galleryTabs = document.querySelectorAll('.gallery-tab');
-  const galleryItems = document.querySelectorAll('.gallery-item');
+  const galleryTabs = document.querySelectorAll('.gallery-nav-tab');
+  const thumbs = document.querySelectorAll('.thumb');
+  const spotlight = document.getElementById('spotlight');
+  const spotlightImg = document.getElementById('spotlight-img');
+  const spotlightTitle = document.getElementById('spotlight-title');
+  const spotlightPlay = document.getElementById('spotlight-play');
 
-  if (galleryTabs.length && galleryItems.length) {
+  let currentThumb = null;
+
+  const setSpotlight = (thumb) => {
+    if (!thumb || thumb === currentThumb) return;
+    thumbs.forEach((t) => t.classList.remove('active'));
+    thumb.classList.add('active');
+    currentThumb = thumb;
+
+    spotlight.classList.add('is-fading');
+    setTimeout(() => {
+      spotlightImg.src = thumb.dataset.img;
+      spotlightImg.alt = thumb.dataset.title;
+      spotlightTitle.textContent = thumb.dataset.title;
+      spotlightPlay.hidden = thumb.dataset.lightbox !== 'video';
+      spotlight.dataset.lightbox = thumb.dataset.lightbox;
+      spotlight.dataset.videoSrc = thumb.dataset.videoSrc || '';
+      spotlight.classList.remove('is-fading');
+    }, 250);
+  };
+
+  if (thumbs.length && spotlight) {
+    thumbs.forEach((thumb) => {
+      thumb.addEventListener('click', () => setSpotlight(thumb));
+    });
+    setSpotlight(thumbs[0]);
+  }
+
+  if (galleryTabs.length && thumbs.length) {
     galleryTabs.forEach((tab) => {
       tab.addEventListener('click', () => {
         galleryTabs.forEach((t) => t.classList.remove('active'));
         tab.classList.add('active');
         const filter = tab.dataset.filter;
-        galleryItems.forEach((item) => {
-          const show = filter === 'all' || item.dataset.category === filter;
-          item.classList.toggle('is-hidden', !show);
+        let firstVisible = null;
+        thumbs.forEach((thumb) => {
+          const show = filter === 'all' || thumb.dataset.category === filter;
+          thumb.classList.toggle('is-hidden', !show);
+          if (show && !firstVisible) firstVisible = thumb;
         });
+        if (firstVisible) setSpotlight(firstVisible);
       });
     });
   }
@@ -92,30 +126,28 @@ document.addEventListener('DOMContentLoaded', () => {
     lightboxContent.innerHTML = '';
   };
 
-  if (lightbox && lightboxContent && galleryItems.length) {
-    galleryItems.forEach((item) => {
-      item.addEventListener('click', () => {
-        const type = item.dataset.lightbox;
-        lightboxContent.innerHTML = '';
-        if (type === 'video') {
-          const video = document.createElement('video');
-          video.src = item.dataset.videoSrc;
-          video.controls = true;
-          video.autoplay = true;
-          video.playsInline = true;
-          lightboxContent.appendChild(video);
-        } else {
-          const img = item.querySelector('img');
-          if (img) {
-            const full = document.createElement('img');
-            full.src = img.src;
-            full.alt = img.alt;
-            lightboxContent.appendChild(full);
-          }
-        }
-        lightbox.classList.add('is-open');
-        lightbox.setAttribute('aria-hidden', 'false');
-      });
+  const openLightbox = (type, videoSrc, imgEl) => {
+    lightboxContent.innerHTML = '';
+    if (type === 'video') {
+      const video = document.createElement('video');
+      video.src = videoSrc;
+      video.controls = true;
+      video.autoplay = true;
+      video.playsInline = true;
+      lightboxContent.appendChild(video);
+    } else if (imgEl) {
+      const full = document.createElement('img');
+      full.src = imgEl.src;
+      full.alt = imgEl.alt;
+      lightboxContent.appendChild(full);
+    }
+    lightbox.classList.add('is-open');
+    lightbox.setAttribute('aria-hidden', 'false');
+  };
+
+  if (lightbox && lightboxContent && spotlight) {
+    spotlight.addEventListener('click', () => {
+      openLightbox(spotlight.dataset.lightbox, spotlight.dataset.videoSrc, spotlightImg);
     });
 
     lightboxClose.addEventListener('click', closeLightbox);
