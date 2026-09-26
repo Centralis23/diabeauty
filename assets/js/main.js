@@ -89,6 +89,21 @@ document.addEventListener('DOMContentLoaded', () => {
     servicesGrid.addEventListener('wheel', stopAuto, { passive: true });
   }
 
+  const welcomeReveals = document.querySelectorAll('.welcome-arch-panel, .services-tags-card');
+  if (welcomeReveals.length && 'IntersectionObserver' in window) {
+    const welcomeObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('welcome-reveal');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    welcomeReveals.forEach((el) => welcomeObserver.observe(el));
+  } else {
+    welcomeReveals.forEach((el) => el.classList.add('welcome-reveal'));
+  }
+
   const whyCards = document.querySelectorAll('.why-card, .why-heading');
   if (whyCards.length && 'IntersectionObserver' in window) {
     const revealObserver = new IntersectionObserver((entries, observer) => {

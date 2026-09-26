@@ -478,6 +478,14 @@ section { padding: 110px 0; }
   border-radius: 120px 120px 0 0;
   padding: 150px 24px 60px;
   text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.welcome-arch-panel.welcome-reveal {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .welcome-arch-inner {
@@ -536,6 +544,14 @@ section { padding: 110px 0; }
   border-radius: 16px;
   box-shadow: 0 20px 44px rgba(43, 36, 34, 0.12);
   padding: 20px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease 0.2s, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.2s;
+}
+
+.services-tags-card.welcome-reveal {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .services-tags-grid {
