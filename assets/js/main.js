@@ -65,57 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     whyCards.forEach((card) => card.classList.add('why-reveal'));
   }
 
-  const galleryTabs = document.querySelectorAll('.gallery-nav-tab');
-  const thumbs = document.querySelectorAll('.thumb');
-  const spotlight = document.getElementById('spotlight');
-  const spotlightImg = document.getElementById('spotlight-img');
-  const spotlightTitle = document.getElementById('spotlight-title');
-  const spotlightPlay = document.getElementById('spotlight-play');
-
-  let currentThumb = null;
-
-  const setSpotlight = (thumb) => {
-    if (!thumb || thumb === currentThumb) return;
-    thumbs.forEach((t) => t.classList.remove('active'));
-    thumb.classList.add('active');
-    currentThumb = thumb;
-
-    spotlight.classList.add('is-fading');
-    setTimeout(() => {
-      spotlightImg.src = thumb.dataset.img;
-      spotlightImg.alt = thumb.dataset.title;
-      spotlightTitle.textContent = thumb.dataset.title;
-      spotlightPlay.hidden = thumb.dataset.lightbox !== 'video';
-      spotlight.dataset.lightbox = thumb.dataset.lightbox;
-      spotlight.dataset.videoSrc = thumb.dataset.videoSrc || '';
-      spotlight.classList.remove('is-fading');
-    }, 250);
-  };
-
-  if (thumbs.length && spotlight) {
-    thumbs.forEach((thumb) => {
-      thumb.addEventListener('click', () => setSpotlight(thumb));
-    });
-    setSpotlight(thumbs[0]);
-  }
-
-  if (galleryTabs.length && thumbs.length) {
-    galleryTabs.forEach((tab) => {
-      tab.addEventListener('click', () => {
-        galleryTabs.forEach((t) => t.classList.remove('active'));
-        tab.classList.add('active');
-        const filter = tab.dataset.filter;
-        let firstVisible = null;
-        thumbs.forEach((thumb) => {
-          const show = filter === 'all' || thumb.dataset.category === filter;
-          thumb.classList.toggle('is-hidden', !show);
-          if (show && !firstVisible) firstVisible = thumb;
-        });
-        if (firstVisible) setSpotlight(firstVisible);
-      });
-    });
-  }
-
+  const fanCards = document.querySelectorAll('.fan-card');
   const lightbox = document.getElementById('lightbox');
   const lightboxContent = document.getElementById('lightbox-content');
   const lightboxClose = document.getElementById('lightbox-close');
@@ -145,9 +95,11 @@ document.addEventListener('DOMContentLoaded', () => {
     lightbox.setAttribute('aria-hidden', 'false');
   };
 
-  if (lightbox && lightboxContent && spotlight) {
-    spotlight.addEventListener('click', () => {
-      openLightbox(spotlight.dataset.lightbox, spotlight.dataset.videoSrc, spotlightImg);
+  if (lightbox && lightboxContent && fanCards.length) {
+    fanCards.forEach((card) => {
+      card.addEventListener('click', () => {
+        openLightbox(card.dataset.lightbox, card.dataset.videoSrc, card.querySelector('img'));
+      });
     });
 
     lightboxClose.addEventListener('click', closeLightbox);
