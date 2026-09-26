@@ -104,15 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
     welcomeReveals.forEach((el) => el.classList.add('welcome-reveal'));
   }
 
-  const pricingHeaders = document.querySelectorAll('.pricing-accordion-header');
-  pricingHeaders.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const isOpen = btn.getAttribute('aria-expanded') === 'true';
-      pricingHeaders.forEach((other) => other.setAttribute('aria-expanded', 'false'));
-      btn.setAttribute('aria-expanded', String(!isOpen));
-    });
-  });
-
   const whyCards = document.querySelectorAll('.why-card, .why-heading');
   if (whyCards.length && 'IntersectionObserver' in window) {
     const revealObserver = new IntersectionObserver((entries, observer) => {
