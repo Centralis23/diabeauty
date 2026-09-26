@@ -45,6 +45,24 @@ document.addEventListener('DOMContentLoaded', () => {
   if (servicesGrid) {
     let autoTimer = null;
     let resumeTimer = null;
+    let animRAF = null;
+
+    const animateTo = (target, duration) => {
+      if (animRAF) cancelAnimationFrame(animRAF);
+      const start = servicesGrid.scrollLeft;
+      const change = target - start;
+      const startTime = performance.now();
+      const tick = (now) => {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const ease = progress < 0.5
+          ? 2 * progress * progress
+          : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+        servicesGrid.scrollLeft = start + change * ease;
+        if (progress < 1) animRAF = requestAnimationFrame(tick);
+      };
+      animRAF = requestAnimationFrame(tick);
+    };
 
     const step = () => {
       const card = servicesGrid.querySelector('.service-card');
@@ -52,11 +70,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const gap = parseFloat(getComputedStyle(servicesGrid).columnGap || '0');
       const cardStep = card.getBoundingClientRect().width + gap;
       const maxScroll = servicesGrid.scrollWidth - servicesGrid.clientWidth;
-      if (servicesGrid.scrollLeft + cardStep >= maxScroll - 2) {
-        servicesGrid.scrollTo({ left: 0, behavior: 'smooth' });
-      } else {
-        servicesGrid.scrollBy({ left: cardStep, behavior: 'smooth' });
-      }
+      const target = servicesGrid.scrollLeft + cardStep >= maxScroll - 2
+        ? 0
+        : servicesGrid.scrollLeft + cardStep;
+      animateTo(target, 700);
     };
 
     const startAuto = () => { autoTimer = setInterval(step, 3200); };
