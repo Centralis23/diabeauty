@@ -139,55 +139,53 @@
       <h2 class="section-title">Un aperçu de notre univers</h2>
     </div>
 
-    <div class="fan-gallery-wrap">
-      <div class="fan-gallery">
-        <div class="fan-card" style="--tilt:-9deg; --shift:16px; --z:1;" data-lightbox="video" data-video-src="assets/video/gallery-braids.mp4">
-          <img src="assets/img/gallery-braids-poster.jpg" alt="Tresses en mouvement" loading="lazy" />
-          <span class="fan-card-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-          <div class="fan-card-overlay"></div>
-          <p class="fan-card-label">Tresses en mouvement</p>
-        </div>
-        <div class="fan-card" style="--tilt:5deg; --shift:-10px; --z:2;" data-lightbox="image">
-          <img src="assets/img/salon-interieur.jpg" alt="Intérieur du salon Diabeauty" loading="lazy" />
-          <div class="fan-card-overlay"></div>
-          <p class="fan-card-label">Notre salon</p>
-        </div>
-        <div class="fan-card" style="--tilt:-4deg; --shift:10px; --z:3;" data-lightbox="image">
-          <img src="assets/img/braids-gold-cuffs.jpg" alt="Tresses collées avec manchettes dorées" loading="lazy" />
-          <div class="fan-card-overlay"></div>
-          <p class="fan-card-label">Tresses &amp; bijoux</p>
-        </div>
-        <div class="fan-card" style="--tilt:6deg; --shift:-14px; --z:4;" data-lightbox="image">
-          <img src="assets/img/client-teddy-bear.jpg" alt="Cliente Diabeauty tresses collées" loading="lazy" />
-          <div class="fan-card-overlay"></div>
-          <p class="fan-card-label">Nos clientes</p>
-        </div>
-        <div class="fan-card" style="--tilt:-6deg; --shift:12px; --z:5;" data-lightbox="video" data-video-src="assets/video/gallery-client.mp4">
-          <img src="assets/img/gallery-client-poster.jpg" alt="Sourire Diabeauty" loading="lazy" />
-          <span class="fan-card-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-          <div class="fan-card-overlay"></div>
-          <p class="fan-card-label">Sourire Diabeauty</p>
-        </div>
-        <div class="fan-card" style="--tilt:4deg; --shift:-8px; --z:6;" data-lightbox="image">
-          <img src="assets/img/arch-braids.jpg" alt="Tresses artistiques" loading="lazy" />
-          <div class="fan-card-overlay"></div>
-          <p class="fan-card-label">Tresses artistiques</p>
-        </div>
-        <div class="fan-card" style="--tilt:-5deg; --shift:14px; --z:7;" data-lightbox="image">
-          <img src="assets/img/nails-chrome-gold.jpg" alt="Manucure chromée et dorée" loading="lazy" />
-          <div class="fan-card-overlay"></div>
-          <p class="fan-card-label">Manucure chromée</p>
-        </div>
-        <div class="fan-card" style="--tilt:7deg; --shift:-12px; --z:8;" data-lightbox="image">
-          <img src="assets/img/braids-2.jpg" alt="Coiffure tressée sur-mesure" loading="lazy" />
-          <div class="fan-card-overlay"></div>
-          <p class="fan-card-label">Coiffure sur-mesure</p>
-        </div>
-        <div class="fan-card" style="--tilt:-3deg; --shift:8px; --z:9;" data-lightbox="image">
-          <img src="assets/img/nails-french-jewel.jpg" alt="Manucure french ornée de bijoux" loading="lazy" />
-          <div class="fan-card-overlay"></div>
-          <p class="fan-card-label">Manucure french</p>
-        </div>
+    <div class="fan-stack" id="fan-stack">
+      <div class="fan-card" style="--i:0; --tilt:8deg;" data-lightbox="video" data-video-src="assets/video/gallery-braids.mp4">
+        <img src="assets/img/gallery-braids-poster.jpg" alt="Tresses en mouvement" loading="lazy" />
+        <span class="fan-card-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        <div class="fan-card-overlay"></div>
+        <p class="fan-card-label">Tresses en mouvement</p>
+      </div>
+      <div class="fan-card" style="--i:1; --tilt:-11deg;" data-lightbox="image">
+        <img src="assets/img/salon-interieur.jpg" alt="Intérieur du salon Diabeauty" loading="lazy" />
+        <div class="fan-card-overlay"></div>
+        <p class="fan-card-label">Notre salon</p>
+      </div>
+      <div class="fan-card" style="--i:2; --tilt:14deg;" data-lightbox="image">
+        <img src="assets/img/braids-gold-cuffs.jpg" alt="Tresses collées avec manchettes dorées" loading="lazy" />
+        <div class="fan-card-overlay"></div>
+        <p class="fan-card-label">Tresses &amp; bijoux</p>
+      </div>
+      <div class="fan-card" style="--i:3; --tilt:-9deg;" data-lightbox="image">
+        <img src="assets/img/client-teddy-bear.jpg" alt="Cliente Diabeauty tresses collées" loading="lazy" />
+        <div class="fan-card-overlay"></div>
+        <p class="fan-card-label">Nos clientes</p>
+      </div>
+      <div class="fan-card" style="--i:4; --tilt:12deg;" data-lightbox="video" data-video-src="assets/video/gallery-client.mp4">
+        <img src="assets/img/gallery-client-poster.jpg" alt="Sourire Diabeauty" loading="lazy" />
+        <span class="fan-card-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        <div class="fan-card-overlay"></div>
+        <p class="fan-card-label">Sourire Diabeauty</p>
+      </div>
+      <div class="fan-card" style="--i:5; --tilt:-13deg;" data-lightbox="image">
+        <img src="assets/img/arch-braids.jpg" alt="Tresses artistiques" loading="lazy" />
+        <div class="fan-card-overlay"></div>
+        <p class="fan-card-label">Tresses artistiques</p>
+      </div>
+      <div class="fan-card" style="--i:6; --tilt:10deg;" data-lightbox="image">
+        <img src="assets/img/nails-chrome-gold.jpg" alt="Manucure chromée et dorée" loading="lazy" />
+        <div class="fan-card-overlay"></div>
+        <p class="fan-card-label">Manucure chromée</p>
+      </div>
+      <div class="fan-card" style="--i:7; --tilt:-8deg;" data-lightbox="image">
+        <img src="assets/img/braids-2.jpg" alt="Coiffure tressée sur-mesure" loading="lazy" />
+        <div class="fan-card-overlay"></div>
+        <p class="fan-card-label">Coiffure sur-mesure</p>
+      </div>
+      <div class="fan-card" style="--i:8; --tilt:15deg;" data-lightbox="image">
+        <img src="assets/img/nails-french-jewel.jpg" alt="Manucure french ornée de bijoux" loading="lazy" />
+        <div class="fan-card-overlay"></div>
+        <p class="fan-card-label">Manucure french</p>
       </div>
     </div>
   </section>
