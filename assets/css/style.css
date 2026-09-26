@@ -288,13 +288,22 @@ section { padding: 110px 0; }
 .services { background: var(--color-bg); }
 
 .services-grid {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 16px;
+  display: flex;
+  overflow-x: auto;
+  gap: 22px;
+  padding-bottom: 4px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
+.services-grid::-webkit-scrollbar { display: none; }
 
 .service-card {
   display: flex;
+  flex: 0 0 300px;
+  scroll-snap-align: start;
   flex-direction: column;
   background: var(--color-white);
   border-radius: var(--radius-lg);
@@ -898,18 +907,7 @@ section { padding: 110px 0; }
     overflow: hidden;
   }
 
-  .services-grid {
-    display: flex;
-    grid-template-columns: none;
-    overflow-x: auto;
-    gap: 18px;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    touch-action: pan-x;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-  .services-grid::-webkit-scrollbar { display: none; }
+  .services-grid { gap: 18px; }
   .service-card { flex: 0 0 82vw; max-width: 320px; scroll-snap-align: start; }
   .service-card-media img,
   .service-card-media video { -webkit-user-drag: none; user-select: none; pointer-events: none; }
