@@ -41,6 +41,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const servicesGrid = document.querySelector('.services-grid');
+  if (servicesGrid) {
+    let autoTimer = null;
+    let resumeTimer = null;
+
+    const step = () => {
+      const card = servicesGrid.querySelector('.service-card');
+      if (!card) return;
+      const gap = parseFloat(getComputedStyle(servicesGrid).columnGap || '0');
+      const cardStep = card.getBoundingClientRect().width + gap;
+      const maxScroll = servicesGrid.scrollWidth - servicesGrid.clientWidth;
+      if (servicesGrid.scrollLeft + cardStep >= maxScroll - 2) {
+        servicesGrid.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        servicesGrid.scrollBy({ left: cardStep, behavior: 'smooth' });
+      }
+    };
+
+    const startAuto = () => { autoTimer = setInterval(step, 3200); };
+    const stopAuto = () => {
+      clearInterval(autoTimer);
+      clearTimeout(resumeTimer);
+      resumeTimer = setTimeout(startAuto, 5000);
+    };
+
+    startAuto();
+    servicesGrid.addEventListener('touchstart', stopAuto, { passive: true });
+    servicesGrid.addEventListener('mousedown', stopAuto);
+    servicesGrid.addEventListener('wheel', stopAuto, { passive: true });
+  }
+
   const whyCards = document.querySelectorAll('.why-card, .why-heading');
   if (whyCards.length && 'IntersectionObserver' in window) {
     const revealObserver = new IntersectionObserver((entries, observer) => {

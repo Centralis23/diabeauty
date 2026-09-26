@@ -289,8 +289,8 @@ section { padding: 110px 0; }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 16px;
 }
 
 .service-card {
@@ -903,11 +903,13 @@ section { padding: 110px 0; }
     grid-template-columns: none;
     overflow-x: auto;
     gap: 18px;
-    padding-bottom: 8px;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     touch-action: pan-x;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
+  .services-grid::-webkit-scrollbar { display: none; }
   .service-card { flex: 0 0 82vw; max-width: 320px; scroll-snap-align: start; }
   .service-card-media img,
   .service-card-media video { -webkit-user-drag: none; user-select: none; pointer-events: none; }
